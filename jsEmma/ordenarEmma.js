@@ -2,7 +2,7 @@ module.exports.comandosEmma = async function (
   client,
   finalMessage,
   message,
-  lastChannel,
+  lastChannel
 ) {
   const {
     Client,
@@ -27,8 +27,7 @@ module.exports.comandosEmma = async function (
   const warframeMarket = require("./pruebaApiWarframe.js");
   if (finalMessage.startsWith("price")) {
     let item = finalMessage.slice(6).trim();
-    let output = await warframeMarket.warframe("price", item);
-    message.reply(output);
+    let output = await warframeMarket.warframe("price", item, message);
   } else if (finalMessage.startsWith("reliquia")) {
     let item = finalMessage.slice(9).trim();
     let output = await warframeMarket.warframe("relic", item, message);
@@ -84,7 +83,7 @@ module.exports.comandosEmma = async function (
       emmaCanta.play(resource);
       connection.subscribe(emmaCanta);
       emmaCanta.on("finish", () =>
-        console.log("La canción finalizó sin errores"),
+        console.log("La canción finalizó sin errores")
       );
       emmaCanta.on("error", (error) => console.error(error));
     } catch (e) {
@@ -109,7 +108,7 @@ module.exports.comandosEmma = async function (
       .setDescription(
         "Aún estoy en me estoy desarrollando por que estoy chikita, pero puedes llamarme con <@" +
           client.user +
-          "> y estoy para lo que necesites!",
+          "> y estoy para lo que necesites!"
       )
       .setFooter({
         text: "No te olvides de escribir bien los mensajes para que pueda entenderte :)",
@@ -146,7 +145,7 @@ module.exports.comandosEmma = async function (
     message.reply(
       "Hola <@" +
         message.author.id +
-        ">,  veo que intentas decirme algo pero no logre entenderte :V. No te olvides que puedes preguntarme por lo que puedo hacer por ti llamandome y diciendome 'help' ",
+        ">,  veo que intentas decirme algo pero no logre entenderte :V. No te olvides que puedes preguntarme por lo que puedo hacer por ti llamandome y diciendome 'help' "
     );
   }
 };
