@@ -1,13 +1,6 @@
 require("dotenv").config();
 const keep_alive = require("./keep_alive.js");
-const Discord = require("discord.js");
-const {
-  Client,
-  Intents,
-  GatewayIntentBits,
-  EmbedBuilder,
-  MessageAttachment,
-} = require("discord.js");
+const { Client, GatewayIntentBits, EmbedBuilder } = require("discord.js");
 const client = new Client({
   intents: [
     32767,
@@ -18,20 +11,8 @@ const client = new Client({
     GatewayIntentBits.MessageContent,
   ],
 });
-const {
-  createAudioPlayer,
-  createAudioResource,
-  joinVoiceChannel,
-  VoiceConnection,
-} = require("@discordjs/voice");
-const ytdl = require("ytdl-core-discord");
-const yts = require("yt-search");
 const fs = require("fs");
-const { stream } = require("undici");
 require("dotenv").config();
-const axios = require("axios");
-
-//COSAS PARA LA AI
 
 //Comandos de Emma
 client.on("messageCreate", async (message) => {
@@ -208,9 +189,6 @@ let secondsCheck = 0;
 let lastRememberedId = 0;
 let inactiveChatSeconds = 5000;
 let stop = true;
-let timeToAnswerGame = 25;
-let emmaState = undefined;
-let respuestaOtorgada;
 fs.readFile("./EmmaJSON/botStateArray.JSON", function (err, data) {
   if (err) {
     console.log("err");
@@ -256,7 +234,6 @@ client.on("messageCreate", (message) => {
 let lastChannel = undefined;
 let lastAuthor = undefined;
 let lastId = undefined;
-let delayEntreMensajes = 100000; // diley entre mensajes automaticos
 
 client.on("ready", () => {
   checkMessageHour();
@@ -308,12 +285,6 @@ function datazo(message) {
   const datoEmma = require("./jsEmma/otorgarDatos.js");
   console.log(datoEmma);
   datoEmma.emmaDiceDato(lastChannel, message);
-}
-//Feliz año nuevo a todos :) Ojala todos puedan cumplir sus sueños este año y podamos ser todos felices :) Vamos por otro años juntos
-
-async function priceCheck() {
-  const warframeMarket = require("./jsEmma/pruebaApiWarframe.js");
-  console.log(await warframeMarket.warframe());
 }
 
 client.on("ready", () => {

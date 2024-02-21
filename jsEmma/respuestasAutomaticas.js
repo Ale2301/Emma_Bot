@@ -1,9 +1,4 @@
-module.exports.respuestasEmma = async function (
-  message,
-  respuesta,
-  lastChannel,
-  client
-) {
+module.exports.respuestasEmma = async function (message, respuesta, client) {
   //CREAR CLIENTE PARA EMMAAI
   const claveEmma = process.env["EMMA_AI_INSTANCIA"];
   const devKey = process.env["DEV_KEY"];
