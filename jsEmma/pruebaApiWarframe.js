@@ -1,6 +1,12 @@
 module.exports.warframe = async function (petition, item, msg) {
-  const { EmbedBuilder } = require("discord.js");
+  const { EmbedBuilder, MessageEmbed } = require("discord.js");
   const axios = require("axios");
+  const lookForParts = [
+    "blueprint",
+    "chassis_blueprint",
+    "neuroptics_blueprint",
+    "systems_blueprint",
+  ];
   let item_name = item;
   let response;
   if (petition === "price") {
@@ -8,24 +14,7 @@ module.exports.warframe = async function (petition, item, msg) {
       "https://api.warframe.market/v1/items/" +
       item_name.toLowerCase().replace(/ /g, "_") +
       "/orders";
-    try {
-      response = await axios.get(api_url);
-    } catch (e) {
-      return "Ese objeto no existe en warframe.market";
-    }
-    let output = response.data.payload.orders;
-    output = output.filter(function (order) {
-      return order.order_type === "sell";
-    });
-    output = output.filter(function (isOnline) {
-      return isOnline.user.status === "ingame";
-    });
-    output.sort(function (a, b) {
-      return a.platinum - b.platinum;
-    });
-    if (typeof output[0] === "undefined") {
-      return "No encontré órdenes de venta para el objeto " + item_name;
-    }
+    let output = await checkUrl(api_url);
     const embed = new EmbedBuilder()
       .setTitle(`Órdenes de venta de ` + item_name)
       .setColor("#FF5733")
@@ -33,7 +22,7 @@ module.exports.warframe = async function (petition, item, msg) {
     const messagesByPrice = new Map();
     for (let i = 0; i < 10; i++) {
       const price = output[i].platinum;
-      const message = `*${i}*/w ${output[i].user.ingame_name} Hi! I want to buy: ${item_name} for ${price} platinum.`;
+      const message = `/w ${output[i].user.ingame_name} Hi! I want to buy: ${item_name} for ${price} platinum.`;
 
       if (!messagesByPrice.has(price)) {
         // Si el precio no existe en el mapa, crea una nueva entrada
@@ -51,6 +40,37 @@ module.exports.warframe = async function (petition, item, msg) {
       });
     });
     msg.reply({ embeds: [embed] });
+    if (item_name.includes("set")) {
+      const embed = new EmbedBuilder()
+        .setTitle(`¿Buscando partes para ${item_name}?`)
+        .setColor("#3498db")
+        .setTimestamp();
+
+      // Iterar sobre cada parte del conjunto
+      for (const part of lookForParts) {
+        console.log(item_name);
+        let lookingPartNow = item_name
+          .toLowerCase()
+          .replace(/\bset\b|\s+/g, "_")
+          .replace(/_+$/, "");
+        console.log(lookingPartNow + "_" + part);
+        const newItemVar =
+          "https://api.warframe.market/v1/items/" +
+          lookingPartNow +
+          "_" +
+          part +
+          "/orders";
+        const newResponse = await checkUrl(newItemVar);
+        if (newResponse) {
+          embed.addFields({
+            name: item_name + "_" + part,
+            value: "Esta parte vale " + newResponse[0].platinum + " platinos",
+          });
+        }
+      }
+      // Enviar el embed al canal
+      msg.reply({ embeds: [embed] });
+    }
   } else if (petition === "relic" || petition === "relich") {
     const api_url = "https://api.warframestat.us/pc/fissures";
     try {
@@ -106,6 +126,27 @@ module.exports.warframe = async function (petition, item, msg) {
     } catch (e) {
       console.error(e);
       return "Error en las fisuras";
+    }
+  }
+  async function checkUrl(url) {
+    try {
+      let output = await axios.get(url);
+      output = output.data.payload.orders;
+      output = output.filter(function (order) {
+        return order.order_type === "sell";
+      });
+      output = output.filter(function (isOnline) {
+        return isOnline.user.status === "ingame";
+      });
+      output.sort(function (a, b) {
+        return a.platinum - b.platinum;
+      });
+      if (typeof output[0] === "undefined") {
+        return "No encontré órdenes de venta para el objeto " + item_name;
+      }
+      return output;
+    } catch (e) {
+      return false;
     }
   }
 };

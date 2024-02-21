@@ -138,7 +138,7 @@ module.exports.respuestasEmma = async function (message, respuesta, client) {
       );
     }
   }
-  if (RNG(1) === 0) {
+  if (RNG(0) === 1) {
     let input = message.content;
     console.log(input);
     fetch("https://emma.cristianalvara9.repl.co/api", {
