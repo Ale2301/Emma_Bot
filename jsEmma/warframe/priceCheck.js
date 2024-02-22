@@ -72,13 +72,10 @@ module.exports.checkPrice = async function (item, msg) {
   async function checkUrl(url) {
     try {
       let output = await axios.get(url);
-      output = output.data.payload.orders;
-      output = output.filter(function (order) {
-        return order.order_type === "sell";
+      output = output.data.payload.orders.filter(function (order) {
+        return order.order_type === "sell" && order.user.status === "ingame";
       });
-      output = output.filter(function (isOnline) {
-        return isOnline.user.status === "ingame";
-      });
+
       output.sort(function (a, b) {
         return a.platinum - b.platinum;
       });
