@@ -287,8 +287,18 @@ function datazo(message) {
   datoEmma.emmaDiceDato(lastChannel, message);
 }
 
+const test = process.env.testing;
+
 client.on("ready", () => {
   console.log("El bot se prendio");
+  try {
+    if (!test) {
+      throw new Error("Apto para usar");
+    }
+    console.log("No Apto para usar");
+  } catch (error) {
+    console.log("Emma esta apta para ser usada");
+  }
 });
 
 module.exports = keep_alive;
