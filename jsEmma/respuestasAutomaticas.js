@@ -1,9 +1,4 @@
-module.exports.respuestasEmma = async function (
-  message,
-  respuesta,
-  lastChannel,
-  client
-) {
+module.exports.respuestasEmma = async function (message, respuesta, client) {
   //CREAR CLIENTE PARA EMMAAI
   const claveEmma = process.env["EMMA_AI_INSTANCIA"];
   const devKey = process.env["DEV_KEY"];
@@ -143,7 +138,7 @@ module.exports.respuestasEmma = async function (
       );
     }
   }
-  if (RNG(1) === 0) {
+  if (RNG(0) === 1) {
     let input = message.content;
     console.log(input);
     fetch("https://emma.cristianalvara9.repl.co/api", {

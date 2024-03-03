@@ -1,13 +1,6 @@
 require("dotenv").config();
 const keep_alive = require("./keep_alive.js");
-const Discord = require("discord.js");
-const {
-  Client,
-  Intents,
-  GatewayIntentBits,
-  EmbedBuilder,
-  MessageAttachment,
-} = require("discord.js");
+const { Client, GatewayIntentBits, EmbedBuilder } = require("discord.js");
 const client = new Client({
   intents: [
     32767,
@@ -18,20 +11,8 @@ const client = new Client({
     GatewayIntentBits.MessageContent,
   ],
 });
-const {
-  createAudioPlayer,
-  createAudioResource,
-  joinVoiceChannel,
-  VoiceConnection,
-} = require("@discordjs/voice");
-const ytdl = require("ytdl-core-discord");
-const yts = require("yt-search");
 const fs = require("fs");
-const { stream } = require("undici");
 require("dotenv").config();
-const axios = require("axios");
-
-//COSAS PARA LA AI
 
 //Comandos de Emma
 client.on("messageCreate", async (message) => {
@@ -41,6 +22,16 @@ client.on("messageCreate", async (message) => {
     message.content.startsWith("<@")
   ) {
     let finalMessage = message.content.slice(22).trim();
+    if (
+      test &&
+      message.author.id !== "368217259094704128" &&
+      !message.author.bot
+    ) {
+      message.reply(
+        "¡Hola! Estoy en modo testeo. O los devs se mandaron una cagada"
+      );
+      return;
+    }
     if (stop === false || stopContraseña === false) {
       return message.reply(
         "No se llama a alguien jugando! Puedes usar 'terminar el juego' para que podamos volver a charlar"
@@ -79,6 +70,7 @@ function juego() {
   });
 }
 client.on("messageCreate", (message) => {
+  return; //CONTRASEÑA
   if (stop === false && message.content.toLowerCase() !== "terminar el juego") {
     for (let i = -1; i < preguntaRandom.respuesta.length; i++) {
       if (message.content.toLowerCase() === preguntaRandom.respuesta[i]) {
@@ -148,6 +140,7 @@ function juegoContraseña() {
   }, 400);
 }
 client.on("messageCreate", (message) => {
+  return; //CONTRASEÑA
   if (stopContraseña === false) {
     if (/^[0-9]+$/.test(message.content) && message.content.length === 4) {
       intentosContraseña++;
@@ -208,9 +201,6 @@ let secondsCheck = 0;
 let lastRememberedId = 0;
 let inactiveChatSeconds = 5000;
 let stop = true;
-let timeToAnswerGame = 25;
-let emmaState = undefined;
-let respuestaOtorgada;
 fs.readFile("./EmmaJSON/botStateArray.JSON", function (err, data) {
   if (err) {
     console.log("err");
@@ -222,17 +212,6 @@ function RNG(max) {
   let random = Math.round(Math.random() * max);
   return random;
 }
-//apartir de aca empieza el codigo de inicio de Emma
-client.on("ready", () => {
-  secondsCheck = 0;
-  checkTimer();
-  console.log(`Logged in as ${client.user.tag}!`); //Actividad de Emma
-  console.log("Emma esta ahora Online!");
-  setInterval(() => {
-    const index = Math.floor(Math.random() * (emmaStates.length - 1) + 1);
-    client.user.setActivity(emmaStates[RNG(emmaStates.length - 1)]);
-  }, 60000);
-});
 
 let respuesta;
 fs.readFile("./EmmaJSON/respuestas.JSON", function (err, data) {
@@ -242,6 +221,9 @@ fs.readFile("./EmmaJSON/respuestas.JSON", function (err, data) {
   respuesta = JSON.parse(data);
 });
 client.on("messageCreate", (message) => {
+  if (test && message.author.id !== 368217259094704128 && !message.author.bot) {
+    return;
+  }
   if (stop) {
     lastChannel = message.channel;
     lastAuthor = message.author;
@@ -256,13 +238,13 @@ client.on("messageCreate", (message) => {
 let lastChannel = undefined;
 let lastAuthor = undefined;
 let lastId = undefined;
-let delayEntreMensajes = 100000; // diley entre mensajes automaticos
 
 client.on("ready", () => {
   checkMessageHour();
 });
 
 client.on("messageCreate", (message) => {
+  return; //REDDIT
   if (stop && !message.author.bot) {
     if (message.content.toLowerCase() === "meme") {
       toReddit(message, false);
@@ -309,15 +291,31 @@ function datazo(message) {
   console.log(datoEmma);
   datoEmma.emmaDiceDato(lastChannel, message);
 }
-//Feliz año nuevo a todos :) Ojala todos puedan cumplir sus sueños este año y podamos ser todos felices :) Vamos por otro años juntos
 
-async function priceCheck() {
-  const warframeMarket = require("./jsEmma/pruebaApiWarframe.js");
-  console.log(await warframeMarket.warframe());
-}
+var test = process.env.testing;
 
 client.on("ready", () => {
   console.log("El bot se prendio");
+  try {
+    if (test) {
+      throw new Error("No apto para usar");
+    }
+    test = false;
+    console.log("Apto para usar");
+  } catch (error) {
+    console.log("Emma esta siendo testeada");
+  }
+  if (test) {
+    client.user.setActivity("Siendo testeada. Y duele");
+    return;
+  }
+  secondsCheck = 0;
+  checkTimer();
+  console.log(`Logged in as ${client.user.tag}!`);
+  console.log("Emma esta ahora Online!");
+  setInterval(() => {
+    client.user.setActivity(emmaStates[RNG(emmaStates.length - 1)]);
+  }, 60000);
 });
 
 module.exports = keep_alive;

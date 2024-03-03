@@ -4,16 +4,10 @@ module.exports.comandosEmma = async function (
   message,
   lastChannel
 ) {
-  const {
-    Client,
-    Intents,
-    GatewayIntentBits,
-    EmbedBuilder,
-    MessageAttachment,
-  } = require("discord.js");
+  const { EmbedBuilder } = require("discord.js");
   const ytdl = require("ytdl-core-discord");
   const yts = require("yt-search");
-  const { createReadStream, createWriteStream } = require("fs");
+  const { createWriteStream } = require("fs");
   const ffmpegPath = require("static-ffmpeg").path;
   const ffmpeg = require("fluent-ffmpeg");
   ffmpeg.setFfmpegPath(ffmpegPath);
@@ -21,19 +15,18 @@ module.exports.comandosEmma = async function (
     createAudioPlayer,
     createAudioResource,
     joinVoiceChannel,
-    VoiceConnection,
   } = require("@discordjs/voice");
   //ordenar a emma: warframe pricecheck
   const warframeMarket = require("./pruebaApiWarframe.js");
   if (finalMessage.startsWith("price")) {
     let item = finalMessage.slice(6).trim();
-    let output = await warframeMarket.warframe("price", item, message);
+    await warframeMarket.warframe("price", item, message);
   } else if (finalMessage.startsWith("reliquia")) {
     let item = finalMessage.slice(9).trim();
-    let output = await warframeMarket.warframe("relic", item, message);
+    await warframeMarket.warframe("relic", item, message);
   } else if (finalMessage.startsWith("reliquiah")) {
     let item = finalMessage.slice(10).trim();
-    let output = await warframeMarket.warframe("relich", item, message);
+    await warframeMarket.warframe("relich", item, message);
   }
   //ordenar a emma: reproducir una cancion
   else if (finalMessage.startsWith("reproduce")) {
