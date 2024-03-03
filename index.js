@@ -22,6 +22,16 @@ client.on("messageCreate", async (message) => {
     message.content.startsWith("<@")
   ) {
     let finalMessage = message.content.slice(22).trim();
+    if (
+      test &&
+      message.author.id !== "368217259094704128" &&
+      !message.author.bot
+    ) {
+      message.reply(
+        "¡Hola! Estoy en modo testeo. O los devs se mandaron una cagada"
+      );
+      return;
+    }
     if (stop === false || stopContraseña === false) {
       return message.reply(
         "No se llama a alguien jugando! Puedes usar 'terminar el juego' para que podamos volver a charlar"
@@ -60,6 +70,7 @@ function juego() {
   });
 }
 client.on("messageCreate", (message) => {
+  return; //CONTRASEÑA
   if (stop === false && message.content.toLowerCase() !== "terminar el juego") {
     for (let i = -1; i < preguntaRandom.respuesta.length; i++) {
       if (message.content.toLowerCase() === preguntaRandom.respuesta[i]) {
@@ -129,6 +140,7 @@ function juegoContraseña() {
   }, 400);
 }
 client.on("messageCreate", (message) => {
+  return; //CONTRASEÑA
   if (stopContraseña === false) {
     if (/^[0-9]+$/.test(message.content) && message.content.length === 4) {
       intentosContraseña++;
@@ -200,17 +212,6 @@ function RNG(max) {
   let random = Math.round(Math.random() * max);
   return random;
 }
-//apartir de aca empieza el codigo de inicio de Emma
-client.on("ready", () => {
-  secondsCheck = 0;
-  checkTimer();
-  console.log(`Logged in as ${client.user.tag}!`); //Actividad de Emma
-  console.log("Emma esta ahora Online!");
-  setInterval(() => {
-    const index = Math.floor(Math.random() * (emmaStates.length - 1) + 1);
-    client.user.setActivity(emmaStates[RNG(emmaStates.length - 1)]);
-  }, 60000);
-});
 
 let respuesta;
 fs.readFile("./EmmaJSON/respuestas.JSON", function (err, data) {
@@ -220,6 +221,9 @@ fs.readFile("./EmmaJSON/respuestas.JSON", function (err, data) {
   respuesta = JSON.parse(data);
 });
 client.on("messageCreate", (message) => {
+  if (test && message.author.id !== 368217259094704128 && !message.author.bot) {
+    return;
+  }
   if (stop) {
     lastChannel = message.channel;
     lastAuthor = message.author;
@@ -240,6 +244,7 @@ client.on("ready", () => {
 });
 
 client.on("messageCreate", (message) => {
+  return; //REDDIT
   if (stop && !message.author.bot) {
     if (message.content.toLowerCase() === "meme") {
       toReddit(message, false);
@@ -287,18 +292,30 @@ function datazo(message) {
   datoEmma.emmaDiceDato(lastChannel, message);
 }
 
-const test = process.env.testing;
+var test = process.env.testing;
 
 client.on("ready", () => {
   console.log("El bot se prendio");
   try {
-    if (!test) {
-      throw new Error("Apto para usar");
+    if (test) {
+      throw new Error("No apto para usar");
     }
-    console.log("No Apto para usar");
+    test = false;
+    console.log("Apto para usar");
   } catch (error) {
-    console.log("Emma esta apta para ser usada");
+    console.log("Emma esta siendo testeada");
   }
+  if (test) {
+    client.user.setActivity("Siendo testeada. Y duele");
+    return;
+  }
+  secondsCheck = 0;
+  checkTimer();
+  console.log(`Logged in as ${client.user.tag}!`);
+  console.log("Emma esta ahora Online!");
+  setInterval(() => {
+    client.user.setActivity(emmaStates[RNG(emmaStates.length - 1)]);
+  }, 60000);
 });
 
 module.exports = keep_alive;
