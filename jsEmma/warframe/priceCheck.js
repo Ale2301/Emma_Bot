@@ -18,26 +18,31 @@ module.exports.checkPrice = async function (item, msg) {
     .setColor("#FF5733")
     .setTimestamp();
   const messagesByPrice = new Map();
-  for (let i = 0; i < 10; i++) {
-    const price = output[i].platinum;
-    const message = `/w ${output[i].user.ingame_name} Hi! I want to buy: ${item_name} for ${price} platinum.`;
+  try {
+    for (let i = 0; i < 10; i++) {
+      const price = output[i].platinum;
+      const message = `/w ${output[i].user.ingame_name} Hi! I want to buy: ${item_name} for ${price} platinum.`;
 
-    if (!messagesByPrice.has(price)) {
-      // Si el precio no existe en el mapa, crea una nueva entrada
-      messagesByPrice.set(price, [message]);
-    } else {
-      // Si el precio ya existe, agrega el mensaje al array existente
-      messagesByPrice.get(price).push(message);
+      if (!messagesByPrice.has(price)) {
+        // Si el precio no existe en el mapa, crea una nueva entrada
+        messagesByPrice.set(price, [message]);
+      } else {
+        // Si el precio ya existe, agrega el mensaje al array existente
+        messagesByPrice.get(price).push(message);
+      }
     }
-  }
-  messagesByPrice.forEach((messages, price) => {
-    const formattedMessages = messages.join("\n");
-    embed.addFields({
-      name: `Se vende por: ${price}pt`,
-      value: formattedMessages,
+    messagesByPrice.forEach((messages, price) => {
+      const formattedMessages = messages.join("\n");
+      embed.addFields({
+        name: `Se vende por: ${price}pt`,
+        value: formattedMessages,
+      });
     });
-  });
-  msg.reply({ embeds: [embed] });
+    msg.reply({ embeds: [embed] });
+  } catch (e) {
+    console.error(e);
+    msg.reply("Error: Ese ítem no existe. ¿Quizás está mal escrito?");
+  }
   if (item_name.includes("set")) {
     const embed = new EmbedBuilder()
       .setTitle(`¿Buscando partes para ${item_name}?`)
