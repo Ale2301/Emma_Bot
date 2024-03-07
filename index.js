@@ -16,41 +16,39 @@ require("dotenv").config();
 
 //Comandos de Emma
 client.on("messageCreate", async (message) => {
-  if (
-    message.mentions.has(client.user) &&
-    message.author.bot === false &&
-    message.content.startsWith("<@")
-  ) {
-    let finalMessage = message.content.slice(22).trim();
-    if (
-      test &&
-      message.author.id !== "368217259094704128" &&
-      !message.author.bot
-    ) {
-      message.reply(
-        "¡Hola! Estoy en modo testeo. O los devs se mandaron una cagada"
-      );
-      return;
-    }
-    if (stop === false || stopContraseña === false) {
-      return message.reply(
-        "No se llama a alguien jugando! Puedes usar 'terminar el juego' para que podamos volver a charlar"
-      );
-    }
-    const ordenarEmma = require("./jsEmma/ordenarEmma.js");
-    ordenarEmma.comandosEmma(client, finalMessage, message, lastChannel);
-    //Ordenar a Emma: Jugar a las preguntas
-    if (finalMessage.startsWith("juguemos a las preguntas")) {
-      message.reply(
-        "Juguemos! Recuerda mencionarme y decir ' Terminar el juego ' cuando quieras detenerte y para el jueo :V"
-      );
-      stop = false;
-      juego();
-    }
-    //Ordenar a Emma: Jugar a la contraseña
-    else if (finalMessage.startsWith("juguemos a la contraseña")) {
-      message.reply("Juguemos!");
-      juegoContraseña();
+  if (message.author.bot === false) {
+    if (message.mentions.has(client.user) && message.content.startsWith("<@")) {
+      let finalMessage = message.content.slice(22).trim();
+      if (
+        test &&
+        message.author.id !== "368217259094704128" &&
+        !message.author.bot
+      ) {
+        message.reply(
+          "¡Hola! Estoy en modo testeo. O los devs se mandaron una cagada"
+        );
+        return;
+      }
+      if (stop === false || stopContraseña === false) {
+        return message.reply(
+          "No se llama a alguien jugando! Puedes usar 'terminar el juego' para que podamos volver a charlar"
+        );
+      }
+      const ordenarEmma = require("./jsEmma/ordenarEmma.js");
+      ordenarEmma.comandosEmma(client, finalMessage, message, lastChannel);
+      //Ordenar a Emma: Jugar a las preguntas
+      if (finalMessage.startsWith("juguemos a las preguntas")) {
+        message.reply(
+          "Juguemos! Recuerda mencionarme y decir ' Terminar el juego ' cuando quieras detenerte y para el jueo :V"
+        );
+        stop = false;
+        juego();
+      }
+      //Ordenar a Emma: Jugar a la contraseña
+      else if (finalMessage.startsWith("juguemos a la contraseña")) {
+        message.reply("Juguemos!");
+        juegoContraseña();
+      }
     }
   }
 });
