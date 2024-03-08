@@ -92,6 +92,9 @@ module.exports.comandosEmma = async function (
     const datoEmma = require("../jsEmma/otorgarDatos.js");
     datoEmma.emmaDiceDato(lastChannel, message);
   }
+  else if (finalMessage.startsWith("juguemos a las preguntas")){
+    return
+  }
 
   //Ordenar a Emma: Menu de ayuda
   else if (finalMessage.startsWith("help")) {

@@ -12,6 +12,7 @@ const client = new Client({
   ],
 });
 const fs = require("fs");
+const fsPromise = require("fs").promises;
 require("dotenv").config();
 
 //Comandos de Emma
@@ -38,10 +39,13 @@ client.on("messageCreate", async (message) => {
       ordenarEmma.comandosEmma(client, finalMessage, message, lastChannel);
       //Ordenar a Emma: Jugar a las preguntas
       if (finalMessage.startsWith("juguemos a las preguntas")) {
+        if (lastChannel === undefined) {
+          message.reply("Vuelve a intentarlo, no estaba lista!");
+          return;
+        }
         message.reply(
           "Juguemos! Recuerda mencionarme y decir ' Terminar el juego ' cuando quieras detenerte y para el jueo :V"
         );
-        stop = false;
         juego();
       }
       //Ordenar a Emma: Jugar a la contraseña
@@ -55,7 +59,7 @@ client.on("messageCreate", async (message) => {
 //Juego de preguntas
 let preguntaRandom;
 let usuariosPreguntasPuntos = [];
-function juego() {
+async function juego() {
   fs.readFile("./EmmaJSON/preguntas.JSON", function (err, data) {
     if (err) {
       console.log("err");
@@ -67,29 +71,38 @@ function juego() {
     lastChannel.send(preguntaRandom.pregunta);
   });
 }
-client.on("messageCreate", (message) => {
-  return; //CONTRASEÑA
+client.on("messageCreate", async (message) => {
+  console.log(stop);
+  console.log(message.content.toLowerCase());
+  console.log(message.author.bot);
+  if (message.author.bot) {
+    return;
+  }
   if (stop === false && message.content.toLowerCase() !== "terminar el juego") {
-    for (let i = -1; i < preguntaRandom.respuesta.length; i++) {
-      if (message.content.toLowerCase() === preguntaRandom.respuesta[i]) {
-        message.reply(
-          "Correctisimo :v! Esa persona tiene mas cultura que el resto"
-        );
-        let actualUser = message.author.username;
-        let userExists = usuariosPreguntasPuntos.filter(
-          (e) => e.user === actualUser
-        );
-        if (userExists.length !== 0) {
-          for (let i = 0; i < usuariosPreguntasPuntos.length; i++) {
-            if (usuariosPreguntasPuntos[i].user === actualUser) {
-              usuariosPreguntasPuntos[i].points++;
+    try {
+      for (let i = -1; i < preguntaRandom.respuesta.length; i++) {
+        if (message.content.toLowerCase() === preguntaRandom.respuesta[i]) {
+          message.reply(
+            "Correctisimo :v! Esa persona tiene mas cultura que el resto"
+          );
+          let actualUser = message.author.username;
+          let userExists = usuariosPreguntasPuntos.filter(
+            (e) => e.user === actualUser
+          );
+          if (userExists.length !== 0) {
+            for (let i = 0; i < usuariosPreguntasPuntos.length; i++) {
+              if (usuariosPreguntasPuntos[i].user === actualUser) {
+                usuariosPreguntasPuntos[i].points++;
+              }
             }
+          } else {
+            usuariosPreguntasPuntos.push({ user: actualUser, points: 1 });
           }
-        } else {
-          usuariosPreguntasPuntos.push({ user: actualUser, points: 1 });
+          await juego();
         }
-        juego();
       }
+    } catch (e) {
+      console.error(e);
     }
   } else if (message.content.toLowerCase() === "terminar el juego") {
     usuariosPreguntasPuntos.sort((a, b) =>
@@ -219,13 +232,13 @@ fs.readFile("./EmmaJSON/respuestas.JSON", function (err, data) {
   respuesta = JSON.parse(data);
 });
 client.on("messageCreate", (message) => {
+  lastChannel = message.channel;
+  lastAuthor = message.author;
+  lastId = message.id;
   if (test && message.author.id !== 368217259094704128 && !message.author.bot) {
     return;
   }
   if (stop) {
-    lastChannel = message.channel;
-    lastAuthor = message.author;
-    lastId = message.id;
     if (message.author.bot === false) {
       const emmaResponde = require("./jsEmma/respuestasAutomaticas.js");
       emmaResponde.respuestasEmma(message, respuesta, lastChannel, client);
