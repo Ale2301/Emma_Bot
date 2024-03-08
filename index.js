@@ -39,6 +39,10 @@ client.on("messageCreate", async (message) => {
       ordenarEmma.comandosEmma(client, finalMessage, message, lastChannel);
       //Ordenar a Emma: Jugar a las preguntas
       if (finalMessage.startsWith("juguemos a las preguntas")) {
+        if (lastChannel === undefined) {
+          message.reply("Vuelve a intentarlo, no estaba lista!");
+          return;
+        }
         message.reply(
           "Juguemos! Recuerda mencionarme y decir ' Terminar el juego ' cuando quieras detenerte y para el jueo :V"
         );
