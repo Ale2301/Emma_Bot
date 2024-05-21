@@ -1,0 +1,15 @@
+[
+  {
+    "fecha": 21,
+    "mes": "mayo",
+    "dia": true,
+    "hora": 15,
+    "minuto": 30,
+    "amPm": "pm",
+    "introMessage": "¡Y estamos con la DSU! Tengo nuevas preguntas para hoy, espero que a todos les esté yendo muy bien",
+    "firstQuestion": "1. ¿En qué empezarán a trabajar en el día de hoy/estuvieron trabajando?",
+    "secondQuestion": "2. ¿Existe algún bloqueador que evite que continuen su trabajo de manera satisfactoria?",
+    "thirdQuestion": "3. ¿Les parece que estamos yendo por el camino correcto? ¿Creen que tenemos que cambiar algo?",
+    "outroMessage": "Los primeros días siempre son los más complicados, pero no aflojen! Todos juntos vamos a salir adelante :)"
+  }
+]

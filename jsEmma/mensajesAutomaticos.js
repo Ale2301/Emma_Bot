@@ -1,4 +1,11 @@
-module.exports.emmaMensajesHorarios = async function (lastChannel) {
+const { default: axios } = require("axios");
+
+module.exports.emmaMensajesHorarios = async function (
+  lastChannel,
+  jobMode,
+  apiKey,
+  tokenKey
+) {
   let horaActual;
   let amPm;
   let hora;
@@ -46,12 +53,112 @@ module.exports.emmaMensajesHorarios = async function (lastChannel) {
       hora +
       ":" +
       minuto +
-      amPm,
+      amPm
   );
   console.log(hora, minuto);
   if (lastChannel !== undefined) {
     const fs = require("fs");
     let mensajesEmma;
+    const api_url =
+      "https://api.trello.com/1/boards/rtvZMMhG/cards?key=" +
+      apiKey +
+      "&token=" +
+      tokenKey;
+
+    const team = {
+      juan: 0,
+      lucho: 0,
+      toby: 0,
+      eli: 0,
+      cris: 0,
+      ale: 0,
+      fran: 0,
+    };
+    const teamReview = {
+      juan: 0,
+      lucho: 0,
+      toby: 0,
+      eli: 0,
+      cris: 0,
+      ale: 0,
+      fran: 0,
+    };
+    const users = [
+      "492729222276579333",
+      "417198683701116940",
+      "347833469474439170",
+      "551463506344411156",
+      "644379308684476426",
+      "368217259094704128",
+      "907382565499990016",
+    ];
+    async function fetchData() {
+      try {
+        const response = await axios.get(api_url);
+        const allCards = response.data.filter(
+          (c) =>
+            c.idList === "6647cc133574da188fb40d8a" ||
+            c.idList === "6647cc2cd02082eda341617f" ||
+            c.idList === "664acdc3542a3c189db431e3"
+        );
+
+        allCards.forEach((e) => {
+          const name = e.name.toLowerCase();
+          Object.keys(team).forEach((memberName) => {
+            if (name.includes(memberName)) {
+              if (e.idList === "664acdc3542a3c189db431e3") {
+                teamReview[memberName] += 1;
+              } else {
+                team[memberName] += 1;
+              }
+            }
+          });
+        });
+        lastChannel.send(e.introMessage);
+        const userNames = Object.keys(team);
+        userNames.forEach((userName) => {
+          console.log(team[userName]);
+          const index = userNames.indexOf(userName);
+          const userId = users[index];
+          const pendingCards = team[userName.toString()];
+          const reviewCards = teamReview[userName.toString()];
+          const message = `<@${userId}> Tiene ${pendingCards} tarjetas pendientes y ${reviewCards} tarjetas en revisión.`;
+          console.log(message);
+          lastChannel.send(message);
+        });
+        lastChannel.send("¡Las preguntas!");
+        lastChannel.send(e.firstQuestion);
+        lastChannel.send(e.secondQuestion);
+        lastChannel.send(e.thirdQuestion);
+        lastChannel.send(e.outroMessage);
+        //Logica de Trello
+      } catch (e) {
+        console.log("error", e);
+      }
+    }
+
+    //
+    if (jobMode) {
+      fs.readFile("./EmmaJSON/managerEmma.JSON", function (err, data) {
+        if (err) {
+          console.log("err");
+        }
+        mensajesEmma = JSON.parse(data);
+        mensajesEmma.forEach((e) => {
+          if (
+            (e.fecha === fechaActual || e.fecha === true) &&
+            (e.mes === mesActual || e.mes === true) &&
+            (e.dia === diaActual || e.dia === true) &&
+            (e.hora === hora || e.hora === true) &&
+            (e.minuto === minuto || e.minuto === true) &&
+            (e.amPm === amPm || e.amPm === true)
+          ) {
+            fetchData(e);
+          }
+        });
+      });
+      return;
+    }
     fs.readFile("./EmmaJSON/mensajesAutomaticos.JSON", function (err, data) {
       if (err) {
         console.log("err");
