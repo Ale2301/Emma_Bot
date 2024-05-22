@@ -56,6 +56,7 @@ module.exports.emmaMensajesHorarios = async function (
       amPm
   );
   console.log(hora, minuto);
+  console.log(lastChannel);
   if (lastChannel !== undefined) {
     console.log("Se esta verificando la hora");
     const fs = require("fs");
