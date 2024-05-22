@@ -56,7 +56,6 @@ module.exports.emmaMensajesHorarios = async function (
       amPm
   );
   console.log(hora, minuto);
-  console.log(lastChannel);
   if (lastChannel !== undefined) {
     console.log("Se esta verificando la hora");
     const fs = require("fs");
@@ -103,7 +102,7 @@ module.exports.emmaMensajesHorarios = async function (
             c.idList === "6647cc2cd02082eda341617f" ||
             c.idList === "664acdc3542a3c189db431e3"
         );
-
+        console.log("se detectaron " + allCards.length + "cartas en Trello");
         allCards.forEach((e) => {
           const name = e.name.toLowerCase();
           Object.keys(team).forEach((memberName) => {
@@ -134,7 +133,7 @@ module.exports.emmaMensajesHorarios = async function (
         lastChannel.send(e.thirdQuestion);
         lastChannel.send(e.outroMessage);
       } catch (e) {
-        console.log("error", e);
+        console.log("Error al enviar la DSU:", e);
       }
     }
 
