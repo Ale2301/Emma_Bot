@@ -1,15 +1,67 @@
 [
   {
-    "fecha": 21,
+    "fecha": 22,
     "mes": "mayo",
     "dia": true,
-    "hora": 15,
-    "minuto": 30,
+    "hora": 3,
+    "minuto": 45,
     "amPm": "pm",
-    "introMessage": "¡Y estamos con la DSU! Tengo nuevas preguntas para hoy, espero que a todos les esté yendo muy bien",
+    "introMessage": "Holis!!!, aqui tenemos otra DSU fresca solo para ustedes asi que empecemos con lo importante y vamos con esas preguntas",
     "firstQuestion": "1. ¿En qué empezarán a trabajar en el día de hoy/estuvieron trabajando?",
-    "secondQuestion": "2. ¿Existe algún bloqueador que evite que continuen su trabajo de manera satisfactoria?",
-    "thirdQuestion": "3. ¿Les parece que estamos yendo por el camino correcto? ¿Creen que tenemos que cambiar algo?",
-    "outroMessage": "Los primeros días siempre son los más complicados, pero no aflojen! Todos juntos vamos a salir adelante :)"
+    "secondQuestion": "2. ¿Crees que hay algo que te este impidiendo avanzar? ¿Qué es?",
+    "thirdQuestion": "3. ¿lograste encontrar el formarto que el juego necesita? escribe la documentacion  que crees que tiene que estar en el formato",
+    "outroMessage": "Los primeros días siempre son los más complicados y los que requieren mas atencion pero no dejes que esto te aplaste y vamos a darlo todo :)"
+  },
+  {
+    "fecha": 23,
+    "mes": "mayo",
+    "dia": true,
+    "hora": 3,
+    "minuto": 20,
+    "amPm": "pm",
+    "introMessage": "Buenas a todos señores y señoritas espero que se esten esforzando mucho por que tengo mucha fe en ustedes :) asi que empecemos con las preguntas que tanto les gustan",
+    "firstQuestion": "1. ¿En que estuviste trabajando?",
+    "secondQuestion": "2. ¿sientes que no estas avanzando? ¿Por que?",
+    "thirdQuestion": "3. ¿lograste encontrar el formarto que el juego necesita? escribe la documentacion  que crees que tiene que estar en el formato",
+    "outroMessage": "Ya es el tercer dia pero a no caer, yo creo en ustedes, y no olviden que nadie puede negarles su destino, si se levantan y lo primero que piensan es en hacer juegos, felicidades ya son desarrolladores y diseñadores de juegos :)"
+  },
+  {
+    "fecha": 24,
+    "mes": "mayo",
+    "dia": true,
+    "hora": 3,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Que tal a todos!!! santos protones Batman esto si que avanza y ya vamos por el cuarto dia, asi que con eso en mente vamos con las preguntas, espero sus respuestas ;)",
+    "firstQuestion": "1. ¿Lograste avanzar en el desarrollo del formato? ¿tienes documentacion para adjuntar?",
+    "secondQuestion": "2. ¿estas durmiendo lo suficiente? no te olvides que eso tambien es importante",
+    "thirdQuestion": "3. ¿como ves el proyecto en 20 dias en el futuro ? sientes que vamos bien encaminados? si tu respuesta es negativa estoy encantada de escuchar recomendaciones :3 ",
+    "outroMessage": "Y esas si son preguntas no como las que tengo en casa, :V asi que aqui va otra DSU espero que todos esten en el camino y todos sabemos que es duro y es dificil pero las tormentas mas fuertes crean los arboles mas altos ;)"
+  },
+  {
+    "fecha": 25,
+    "mes": "mayo",
+    "dia": true,
+    "hora": 3,
+    "minuto": 34,
+    "amPm": "pm",
+    "introMessage": "YYYYYYY bienvenidos a la DSU espero que todos esten listos para esto por que yo estoy mas que lista asi que vamos por esas preguntas :V",
+    "firstQuestion": "1. ¿Lograste avanzar en el desarrollo del formato? ¿tienes documentacion para adjuntar?",
+    "secondQuestion": "2. ¿estas durmiendo lo suficiente? no te olvides que eso tambien es importante",
+    "thirdQuestion": "3. ¿como ves el proyecto en 20 dias en el futuro ? sientes que vamos bien encaminados? si tu respuesta es negativa estoy encantada de escuchar recomendaciones :3 ",
+    "outroMessage": "Y esas si son preguntas no como las que tengo en casa, :V asi que aqui va otra DSU espero que todos esten en el camino y todos sabemos que es duro y es dificil pero las tormentas mas fuertes crean los arboles mas altos ;)"
+  },
+  {
+    "fecha": 26,
+    "mes": "mayo",
+    "dia": true,
+    "hora": 3,
+    "minuto": 37,
+    "amPm": "pm",
+    "introMessage": "Que tal andan todos!? todos estan listos? por que hoy vamos con todo a dar todo lo que tenemos y estamos listos? vamos con las preguntas :v",
+    "firstQuestion": "1. ¿ya tenemos un formato listo para el GDD? ¿tienes documentacion para adjuntar?",
+    "secondQuestion": "2. ya paso una semana, ¿como te sientes en el equipo? aqui se vale todo tipo de respuestas si hay algo que no te gusta solo dilo ;V",
+    "thirdQuestion": "3. ¿como te va este domigo por la tarde? no te olivides que descansar tambien es importante ",
+    "outroMessage": "Y ahi va otra semana, espero que tengan un genial inicio de sprint mañana y vamos por todo :)"
   }
 ]

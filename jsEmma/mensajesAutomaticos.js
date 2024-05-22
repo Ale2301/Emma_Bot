@@ -57,6 +57,7 @@ module.exports.emmaMensajesHorarios = async function (
   );
   console.log(hora, minuto);
   if (lastChannel !== undefined) {
+    console.log("Se esta verificando la hora");
     const fs = require("fs");
     let mensajesEmma;
     const api_url =
@@ -131,7 +132,6 @@ module.exports.emmaMensajesHorarios = async function (
         lastChannel.send(e.secondQuestion);
         lastChannel.send(e.thirdQuestion);
         lastChannel.send(e.outroMessage);
-        //Logica de Trello
       } catch (e) {
         console.log("error", e);
       }
@@ -139,6 +139,7 @@ module.exports.emmaMensajesHorarios = async function (
 
     //
     if (jobMode) {
+      console.log("El modo Trello esta habilitado");
       fs.readFile("./EmmaJSON/managerEmma.JSON", function (err, data) {
         if (err) {
           console.log("err");
@@ -153,6 +154,7 @@ module.exports.emmaMensajesHorarios = async function (
             (e.minuto === minuto || e.minuto === true) &&
             (e.amPm === amPm || e.amPm === true)
           ) {
+            console.log("Estamos en horario de mandar el mensaje!");
             fetchData(e);
           }
         });
