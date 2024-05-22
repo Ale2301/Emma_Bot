@@ -312,12 +312,12 @@ client.on("ready", () => {
   } catch (error) {
     console.log("Emma esta siendo testeada");
   }
+  if (process.env.TRELLO) {
+    lastChannel = "1241836174411300882";
+    lastChannel = client.channels.cache.get(lastChannel);
+  }
   if (test) {
     client.user.setActivity("Siendo testeada. Y duele");
-    if (process.env.TRELLO) {
-      lastChannel = "1241836174411300882";
-      lastChannel = client.channels.cache.get(lastChannel);
-    }
     return;
   }
   secondsCheck = 0;
