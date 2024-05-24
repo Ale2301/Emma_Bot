@@ -1,11 +1,11 @@
 [
   {
-    "fecha": 22,
-    "mes": "mayo",
+    "fecha": true,
+    "mes": true,
     "dia": true,
-    "hora": 4,
-    "minuto": 0,
-    "amPm": "pm",
+    "hora": true,
+    "minuto": true,
+    "amPm": true,
     "introMessage": "Holis!!!, aqui tenemos otra DSU fresca solo para ustedes asi que empecemos con lo importante y vamos con esas preguntas",
     "firstQuestion": "1. ¿En qué empezarán a trabajar en el día de hoy/estuvieron trabajando?",
     "secondQuestion": "2. ¿Crees que hay algo que te este impidiendo avanzar? ¿Qué es?",

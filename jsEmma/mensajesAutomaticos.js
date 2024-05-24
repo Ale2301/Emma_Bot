@@ -115,6 +115,7 @@ module.exports.emmaMensajesHorarios = async function (
             }
           });
         });
+        /*
         lastChannel.send(e.introMessage);
         const userNames = Object.keys(team);
         userNames.forEach((userName) => {
@@ -131,7 +132,7 @@ module.exports.emmaMensajesHorarios = async function (
         lastChannel.send(e.firstQuestion);
         lastChannel.send(e.secondQuestion);
         lastChannel.send(e.thirdQuestion);
-        lastChannel.send(e.outroMessage);
+        lastChannel.send(e.outroMessage);*/
       } catch (e) {
         console.log("Error al enviar la DSU:", e);
       }
