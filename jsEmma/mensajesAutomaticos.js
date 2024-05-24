@@ -93,7 +93,7 @@ module.exports.emmaMensajesHorarios = async function (
       "368217259094704128",
       "907382565499990016",
     ];
-    async function fetchData() {
+    async function fetchData(e) {
       try {
         const response = await axios.get(api_url);
         const allCards = response.data.filter(
@@ -115,7 +115,7 @@ module.exports.emmaMensajesHorarios = async function (
             }
           });
         });
-        /*
+
         lastChannel.send(e.introMessage);
         const userNames = Object.keys(team);
         userNames.forEach((userName) => {
@@ -132,7 +132,7 @@ module.exports.emmaMensajesHorarios = async function (
         lastChannel.send(e.firstQuestion);
         lastChannel.send(e.secondQuestion);
         lastChannel.send(e.thirdQuestion);
-        lastChannel.send(e.outroMessage);*/
+        lastChannel.send(e.outroMessage);
       } catch (e) {
         console.log("Error al enviar la DSU:", e);
       }
