@@ -173,7 +173,7 @@
     "mes": "junio",
     "dia": true,
     "hora": 7,
-    "minuto": 25,
+    "minuto": 28,
     "amPm": "pm",
     "introMessage": "Y hoy es lunes y el prototipo es para mañana, creen que esta listo? pues veamos que me dicen con unas preguntas al respecto ",
     "firstQuestion": "1. Viste el prototipo? que te parecio?",
@@ -181,7 +181,7 @@
     "thirdQuestion": "3.  Piensas que se le podria gregar algo mas al prototipo? ",
     "outroMessage": "y no se olviden chicos, en la vida hay que dar algo para obtener otra cosa, hay que sacrificar tiempo y esfuerzo para obtener un buen resultado o tendremos que sacrificar al resultado "
   },  {
-    "fecha": 3,
+    "fecha": 4,
     "mes": "junio",
     "dia": true,
     "hora": 7,
@@ -192,19 +192,6 @@
     "secondQuestion": "2. cual crees que es el siguiente paso para mejorar el prototipo?",
     "thirdQuestion": "3.  si tu lo estarias programando, que le agregarias? o cual seria el siguiente paso que darias? ",
     "outroMessage": "y ahi va otra muestra al profesor, se que lo estan haciendo genial pero no es momento de aflojar, me cuentan que todos se estan esforzando mucho asi que no se olviden que dormir bien para crecer grandes y fuertes "
-  },
-  {
-    "fecha": 4,
-    "mes": "junio",
-    "dia": true,
-    "hora": 7,
-    "minuto": 15,
-    "amPm": "pm",
-    "introMessage": "Y hoy es lunes y el prototipo es para mañana, creen que esta listo? pues veamos que me dicen con unas preguntas al respecto ",
-    "firstQuestion": "1. Viste el prototipo? que te parecio?",
-    "secondQuestion": "2. sientes que hay que agregarle algo? ¿crees que esta listo para el martes?",
-    "thirdQuestion": "3.  Piensas que se le podria gregar algo mas al prototipo? ",
-    "outroMessage": "y no se olviden chicos, en la vida hay que dar algo para obtener otra cosa, hay que sacrificar tiempo y esfuerzo para obtener un buen resultado o tendremos que sacrificar al resultado "
   },
   {
     "fecha": 5,
