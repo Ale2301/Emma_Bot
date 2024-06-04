@@ -257,6 +257,19 @@
     "secondQuestion": "2. sientes que hay buena comunicacion en el grupo?",
     "thirdQuestion": "3.  hoy es domingo asi que podriamos jugar al juego de la IA, como me gusta el juego de la IA ",
     "outroMessage": "asi termina otra semana, no se olviden descansar para estar listos para afrontar otra semana :)"
+  },
+  {
+    "fecha": 10,
+    "mes": "junio",
+    "dia": true,
+    "hora": 7,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Lunes con L de La puta madre paren la vida que quiero bajarme",
+    "firstQuestion": "1. Viste el prototipo? sientes mejoras en el mismo?",
+    "secondQuestion": "2. sientes que hay buena comunicacion en el grupo?",
+    "thirdQuestion": "3.  hoy es domingo asi que podriamos jugar al juego de la IA, como me gusta el juego de la IA ",
+    "outroMessage": "asi termina otra semana, no se olviden descansar para estar listos para afrontar otra semana :)"
   }
 ]
 
