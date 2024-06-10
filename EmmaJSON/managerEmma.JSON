@@ -24,8 +24,8 @@
     "secondQuestion": "2. ¿Crees que hay algo que te este impidiendo avanzar? ¿Qué es?",
     "thirdQuestion": "3. ¿lograste encontrar el formarto que el juego necesita? escribe la documentacion  que crees que tiene que estar en el formato",
     "outroMessage": "Los primeros días siempre son los más complicados y los que requieren mas atencion pero no dejes que esto te aplaste y vamos a darlo todo :)"
-  }, 
-   {
+  },
+  {
     "fecha": 23,
     "mes": "mayo",
     "dia": true,
@@ -180,7 +180,8 @@
     "secondQuestion": "2. sientes que hay que agregarle algo? ¿crees que esta listo para el martes?",
     "thirdQuestion": "3.  Piensas que se le podria gregar algo mas al prototipo? ",
     "outroMessage": "y no se olviden chicos, en la vida hay que dar algo para obtener otra cosa, hay que sacrificar tiempo y esfuerzo para obtener un buen resultado o tendremos que sacrificar al resultado "
-  },  {
+  },
+  {
     "fecha": 4,
     "mes": "junio",
     "dia": true,
@@ -257,6 +258,18 @@
     "secondQuestion": "2. sientes que hay buena comunicacion en el grupo?",
     "thirdQuestion": "3.  hoy es domingo asi que podriamos jugar al juego de la IA, como me gusta el juego de la IA ",
     "outroMessage": "asi termina otra semana, no se olviden descansar para estar listos para afrontar otra semana :)"
+  },
+  {
+    "fecha": 10,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "DSU time! Estamos a lunes, día anterior al día de los jueguitos, ¿Cómo va ese avance? Hoy vamos a cambiar un poco las preguntas :)",
+    "firstQuestion": "1. ¿Necesitas una mano? ¿Gestionas bien el estrés? Es importante que si necesitan ayuda o sólo desahogarse, lo hagan :)",
+    "secondQuestion": "2. ¿Qué les pareció la reunión retrospectiva? ¿Les gustaría que se repita? ¿Algo a mejorar?",
+    "thirdQuestion": "3. Quedan sólo 20 días para terminar el proyecto. Pensando en ese legendario día, ¿Se sienten agobiados, felices o ansiosos?",
+    "outroMessage": "Empezamos una nueva semana, y un nuevo Sprint. Recuerden que, estando a más de la mitad de camino, este es el momento donde los débiles se retiran y/o se queman. No dejen que eso les pase, veo un futuro brillante en su proyecto :)"
   }
 ]
-
