@@ -271,5 +271,18 @@
     "secondQuestion": "2. ¿Qué les pareció la reunión retrospectiva? ¿Les gustaría que se repita? ¿Algo a mejorar?",
     "thirdQuestion": "3. Quedan sólo 20 días para terminar el proyecto. Pensando en ese legendario día, ¿Se sienten agobiados, felices o ansiosos?",
     "outroMessage": "Empezamos una nueva semana, y un nuevo Sprint. Recuerden que, estando a más de la mitad de camino, este es el momento donde los débiles se retiran y/o se queman. No dejen que eso les pase, veo un futuro brillante en su proyecto :)"
+  },
+ {
+    "fecha": 16,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Que ondaaa mi primera DSU no me odien xd, atte TurCobain",
+    "firstQuestion": "1. ¿Como venis con el trabajo para este fin de semana?",
+    "secondQuestion": "2. ¿Tienen algun bloqueo que no les deje avanzar?",
+    "thirdQuestion": "3. Ya van quedando poco para cerrar este trabajo. ¿Sienten que no pueden con algo y necesitan ayuda?",
+    "outroMessage": "El Lunes Srpint Nro 6(?), y queda poco para llegar a nuestro objeivo, festejen lloren y TRABAJEN eso es muy importante"
   }
 ]
