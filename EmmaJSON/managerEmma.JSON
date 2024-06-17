@@ -284,5 +284,18 @@
     "secondQuestion": "2. ¿Tienen algun bloqueo que no les deje avanzar?",
     "thirdQuestion": "3. Ya van quedando poco para cerrar este trabajo. ¿Sienten que no pueden con algo y necesitan ayuda?",
     "outroMessage": "El Lunes Srpint Nro 6(?), y queda poco para llegar a nuestro objeivo, festejen lloren y TRABAJEN eso es muy importante"
+  },
+ {
+    "fecha": 17,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Hoy tenemos un cierre de Sprint, y cada vez falta menos para estar celebrando con alcohol y jugadoras de voley rusas o llorar en la ducha",
+    "firstQuestion": "1. ¿Cuáles considera que han sido sus  logros durante las ultimas semanas y cómo contribuyen a los objetivos del equipo?",
+    "secondQuestion": "2. ¿Cuáles son sus objetivos para esta semana de trabajo?",
+    "thirdQuestion": "3. ¿Existen factores que afecten negativamente su capacidad para gestionar el tiempo y ser productivo?",
+    "outroMessage": "Valoramos la dedicación y contribución de cada uno... Animo muchachos y sigan con este entusiasmo"
   }
 ]
