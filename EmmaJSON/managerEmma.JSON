@@ -310,5 +310,18 @@
     "secondQuestion": "2. ¿Como te sentis con el trabajo para esta semana?",
     "thirdQuestion": "3. Algun comentario acerca del proyecto.. este espacio es para  desahogarse",
     "outroMessage": "Garra y huevos/ovarios que queda poco para ser felices"
+  },
+{
+    "fecha": 19,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Mitad de semana y sabemos que hay feriados de por medio, les diria que salgan, pero el tiempo apremia",
+    "firstQuestion": "1. ¿Cómo gestionas y aplicas la retroalimentación que recibes?",
+    "secondQuestion": "2. ¿Enfrentaste conflictos? ¿Cómo los resolviste?",
+    "thirdQuestion": "3. ¿Cómo gestionas el equilibrio entre el proyecto y tu vida personal?",
+    "outroMessage": "Aguante corazon aguante..."
   }
 ]
