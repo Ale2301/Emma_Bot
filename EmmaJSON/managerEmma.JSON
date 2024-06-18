@@ -297,5 +297,18 @@
     "secondQuestion": "2. ¿Cuáles son sus objetivos para esta semana de trabajo?",
     "thirdQuestion": "3. ¿Existen factores que afecten negativamente su capacidad para gestionar el tiempo y ser productivo?",
     "outroMessage": "Valoramos la dedicación y contribución de cada uno... Animo muchachos y sigan con este entusiasmo"
+  },
+ {
+    "fecha": 18,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Tras un nuevo cierre de sprint y con trabajo para esta semana es momento de desahogarse",
+    "firstQuestion": "1. ¿Qué aspectos destacarías dentro del grupo y cuáles crees que podrían mejorar?",
+    "secondQuestion": "2. ¿Como te sentis con el trabajo para esta semana?",
+    "thirdQuestion": "3. Algun comentario acerca del proyecto.. este espacio es para  desahogarse",
+    "outroMessage": "Garra y huevos/ovarios que queda poco para ser felices"
   }
 ]
