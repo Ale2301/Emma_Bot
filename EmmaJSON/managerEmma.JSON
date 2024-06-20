@@ -336,5 +336,18 @@
     "secondQuestion": "2. ¿Como estas gestionando tus tiempos?",
     "thirdQuestion": "3. ¿Te sentis comodo con la cantidad de tarjetas otorgadas?",
     "outroMessage": "Como hoy juega Messi y la Scaloneta dense el lujo de estar chill y dsifrutar de un buen fulbo"
+  },
+{
+    "fecha": 21,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Como sabemos hoy tenemos cierre de Sprint",
+    "firstQuestion": "1. ¿Como estuvo tu semana de trabajo?",
+    "secondQuestion": "2. ¿Cuanto tiempo le dedicaste al proyecto y cuanto a tu vida personal?",
+    "thirdQuestion": "3. ¿No llegas con alguna tarjeta?¿Por que motivo y como te podemos ayudar?",
+    "outroMessage": "Recuerden que no somos robots y a veces si no se llega a algo esperado no se preocupen lo podemos solucionar como equipo"
   }
 ]
