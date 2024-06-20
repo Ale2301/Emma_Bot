@@ -323,5 +323,18 @@
     "secondQuestion": "2. ¿Enfrentaste conflictos? ¿Cómo los resolviste?",
     "thirdQuestion": "3. ¿Cómo gestionas el equilibrio entre el proyecto y tu vida personal?",
     "outroMessage": "Aguante corazon aguante..."
+  },
+{
+    "fecha": 20,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Buen Jueves gente, y recuerden hoy juega la Scaloneta",
+    "firstQuestion": "1. ¿Como estas? pregunta simple",
+    "secondQuestion": "2. ¿Como estas gestionando tus tiempos?",
+    "thirdQuestion": "3. ¿Te sentis comodo con la cantidad de tarjetas otorgadas?",
+    "outroMessage": "Como hoy juega Messi y la Scaloneta dense el lujo de estar chill y dsifrutar de un buen fulbo"
   }
 ]
