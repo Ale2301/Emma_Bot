@@ -349,5 +349,18 @@
     "secondQuestion": "2. ¿Cuanto tiempo le dedicaste al proyecto y cuanto a tu vida personal?",
     "thirdQuestion": "3. ¿No llegas con alguna tarjeta?¿Por que motivo y como te podemos ayudar?",
     "outroMessage": "Recuerden que no somos robots y a veces si no se llega a algo esperado no se preocupen lo podemos solucionar como equipo"
+  },
+{
+    "fecha": 22,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Estamos llegando casi a la recta final(para la entrega el profe)",
+    "firstQuestion": "1. ¿Como te sentis con el trabajo asignado?",
+    "secondQuestion": "2. ¿Vas a tomerte tiempo para vos esta noche de sabado?",
+    "thirdQuestion": "3. ¿Crees necesitar ayuda?",
+    "outroMessage": "Trabajemos duro despues tendremos nuestra recompensa :p"
   }
 ]
