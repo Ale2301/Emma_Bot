@@ -362,5 +362,18 @@
     "secondQuestion": "2. ¿Vas a tomerte tiempo para vos esta noche de sabado?",
     "thirdQuestion": "3. ¿Crees necesitar ayuda?",
     "outroMessage": "Trabajemos duro despues tendremos nuestra recompensa :p"
+  },
+{
+    "fecha": 23,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Espero que vayan teniendo un buen Domingo",
+    "firstQuestion": "1. ¿Como te organizaste con el sprint asincronico?",
+    "secondQuestion": "2. ¿Pasaste el Domingo trabajando o te tomaste tus tiempos para estar con la familia/estudiar/otros?",
+    "thirdQuestion": "3. ¿Como se organizan sabiendo que el Lunes hay un parcial?(pregunta para los UnaHur)...¿Sienten que el tiempo empieza a ser problema?",
+    "outroMessage": "Descansen(pero no mucho), tomense unos mates y que esta semana se vienen cositas"
   }
 ]
