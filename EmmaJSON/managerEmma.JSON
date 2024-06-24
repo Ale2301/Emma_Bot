@@ -375,5 +375,18 @@
     "secondQuestion": "2. ¿Pasaste el Domingo trabajando o te tomaste tus tiempos para estar con la familia/estudiar/otros?",
     "thirdQuestion": "3. ¿Como se organizan sabiendo que el Lunes hay un parcial?(pregunta para los UnaHur)...¿Sienten que el tiempo empieza a ser problema?",
     "outroMessage": "Descansen(pero no mucho), tomense unos mates y que esta semana se vienen cositas"
+  },
+{
+    "fecha": 24,
+    "mes": "junio",
+    "dia": true,
+    "hora": 9,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Hoy tenemos cierre de sprint arranca la ulitma semana de laburo intenso (para la entrega del prof.)",
+    "firstQuestion": "1. ¿Sienten presion? Este es su momento de desahogarse",
+    "secondQuestion": "2. ¿Cuanto tiempo le van a dedicar esta semana hard?",
+    "thirdQuestion": "3. ¿Crees necesitar ayuda?",
+    "outroMessage": "Vamos loco, este grupo me llena de orgullo "
   }
 ]
