@@ -414,5 +414,70 @@
     "secondQuestion": "2. ¿Qué tareas específicas no has cumplido de manera adecuada? ¿Cómo piensas asumir la responsabilidad y resolver estos problemas?",
     "thirdQuestion": "3. ¿Qué partes de tu trabajo crees que están por debajo del estándar esperado?",
     "outroMessage": "DALEEEEEEEEE :v"
+  },
+  {
+    "fecha": 27,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Buen Jueves manga de Simulacros (el q sepa quien decia eso se gana un caramelo we)",
+    "firstQuestion": "1. ¿Hay alguna tarea crítica que aún no esté comenzada?",
+    "secondQuestion": "2. ¿Están todos los miembros del equipo al tanto de las prioridades y los plazos finales?",
+    "thirdQuestion": "3. ¿Cuáles son las tres principales prioridades de aquí a la fecha límite?¿La documentación del proyecto está actualizada y completa?",
+    "outroMessage": "Metanle pata loco dale... No me hagan calentar :v"
+  },
+  {
+    "fecha": 28,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "¿QUE DIA ES HOY? Viernes ¿Y QUE PASA LO VIERNES? NO ME BAÑOOO.",
+    "firstQuestion": "1. ¿Qué tareas específicas estás trabajando hoy y cuál es tu objetivo para el día?",
+    "secondQuestion": "2. ¿Hay algún problema que hayas encontrado en las últimas 24 horas que aún no se haya resuelto?",
+    "thirdQuestion": "3. ¿Hay alguna tarea que esté tomando más tiempo de lo esperado?",
+    "outroMessage": "DALEEEEEEEEE VIEJOOOO"
+  },
+  {
+    "fecha": 29,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Sigan laburando...",
+    "firstQuestion": "1. ¿Estamos aún en camino de cumplir con todos los plazos establecidos? Si no, ¿qué ajustes urgentes necesitamos hacer?",
+    "secondQuestion": "2. Qué tareas completaste y cuál es su estado actual?",
+    "thirdQuestion": "3. ¿Qué partes de tu trabajo crees que están por debajo del estándar esperado?",
+    "outroMessage": "FALTA POCO CHE"
+  },
+  {
+    "fecha": 30,
+    "mes": "junio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "2 DIAS...",
+    "firstQuestion": "1. ¿Ya se empezo la fase de testeo?",
+    "secondQuestion": "2. ¿Surgio algun bug inesperado?",
+    "thirdQuestion": "3. ¿Como se sienten con el proyecto hasta ahora?",
+    "outroMessage": "El Lunes ya es el ultimo srpint"
+  },
+  {
+    "fecha": 1,
+    "mes": "julio",
+    "dia": true,
+    "hora": 8,
+    "minuto": 15,
+    "amPm": "pm",
+    "introMessage": "Hoy hay cierre de sprint, que es el ultimo pre entrega al señor jueguitos",
+    "firstQuestion": "1. ¿¿Está toda la documentación al día?",
+    "secondQuestion": "2. ¿Están listos los entregables que deben ser revisados o presentados?",
+    "thirdQuestion": "3. ¿Hay algún entregable que necesite una revisión adicional o ajustes finales antes de la entrega?",
+    "outroMessage": "MIREN A DONDE LLEGAMOS ME LLENAN DE ORGULLO LOCO"
   }
 ]
