@@ -479,5 +479,18 @@
     "secondQuestion": "2. ¿Están listos los entregables que deben ser revisados o presentados?",
     "thirdQuestion": "3. ¿Hay algún entregable que necesite una revisión adicional o ajustes finales antes de la entrega?",
     "outroMessage": "MIREN A DONDE LLEGAMOS ME LLENAN DE ORGULLO LOCO"
+  },
+  {
+    "fecha": 2,
+    "mes": "julio",
+    "dia": true,
+    "hora": 6,
+    "minuto": 00,
+    "amPm": "pm",
+    "introMessage": "Felicitaciones por llegar al objetivo, hoy se entrego el prototipo al Profe... espero haya sido un exito",
+    "firstQuestion": "1. ¿Como te sentis con el resultado?¿Es lo esperado?",
+    "secondQuestion": "2. Nos vamos a tomar unos dias chill ¿Que vas a hacer?",
+    "thirdQuestion": "3. ¿Como te sentiste con el grupo?",
+    "outroMessage": "ME LLENAN DE ORGULLO LOCO... Esta es la ultima DSU por el momento, descansen y vivan la vida."
   }
 ]
