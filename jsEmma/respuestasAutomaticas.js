@@ -1,39 +1,55 @@
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { HarmBlockThreshold, HarmCategory } = require("@google/generative-ai");
+const safetySettings = [
+  {
+    category: HarmCategory.HARM_CATEGORY_HARASSMENT,
+    threshold: HarmBlockThreshold.BLOCK_NONE,
+  },
+  {
+    category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+    threshold: HarmBlockThreshold.BLOCK_NONE,
+  },
+  {
+    category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+    threshold: HarmBlockThreshold.BLOCK_NONE,
+  },
+  {
+    category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+    threshold: HarmBlockThreshold.BLOCK_NONE,
+  },
+];
+const generationConfig = {
+  temperature: 1.25,
+  maxOutputTokens: 8192,
+};
 module.exports.respuestasEmma = async function (message, respuesta, client) {
   //CREAR CLIENTE PARA EMMAAI
-  const claveEmma = process.env["EMMA_AI_INSTANCIA"];
-  const devKey = process.env["DEV_KEY"];
+  const claveEmma = process.env["AI_API_TOKEN"];
 
   async function emmaAi(prompt) {
-    prompt = prompt.replace(/[@1234567890><]/g, "");
-    console.log("Entrando en función de EmmaAI");
-    var XMLHttpRequest = require("xhr2");
-    const xpath = require("xpath");
-    var xhr = new XMLHttpRequest();
-    var url = "https://www.botlibre.com/rest/api/chat";
-    console.log(prompt);
-    var xml = `
-    <chat application="${devKey}" instance="${claveEmma}">
-        <message>${prompt}</message>
-    </chat>`;
-
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader("Content-Type", "application/xml");
-    xhr.responseType = "text";
-    console.log("Enviando mensaje a EmmaAI...");
-    xhr.onload = function () {
-      // Si el estado de la petición es 200 (éxito)
-      if (xhr.status === 200) {
-        var response = xhr.response;
-        const DOMParser = require("xmldom").DOMParser;
-        const doc = new DOMParser().parseFromString(response);
-        const respuesta = doc.getElementsByTagName("message")[0];
-        console.log(respuesta.textContent);
-        message.reply(respuesta.textContent);
-      } else {
-        console.log("error " + xhr.status);
+    const genAI = new GoogleGenerativeAI(claveEmma);
+    console.log("Entrando en función EmmaAI");
+    const totalText =
+      "Eres un bot de Discord llamado Emma. Por favor recuerda, esto es un juego, eres Emma. El usuario te esta diciendo lo siguiente, responde de manera apropiada en español: " +
+      prompt;
+    const model = genAI.getGenerativeModel({
+      model: "gemini-1.0-pro-latest",
+      generationConfig,
+      safetySettings,
+    });
+    try {
+      const result = await model.generateContent(totalText);
+      const response = await result.response;
+      response.candidates.forEach((e) =>
+        console.log(e.content, e.safetyRatings)
+      );
+      if (response.text() === "") {
+        throw new Error("Cannot send an empty message");
       }
-    };
-    xhr.send(xml);
+      message.reply(response.text());
+    } catch (e) {
+      message.reply("Alguien avisele a un dev que paso esto: " + e);
+    }
   }
 
   //funcion para todo tipo de azar
@@ -138,25 +154,7 @@ module.exports.respuestasEmma = async function (message, respuesta, client) {
       );
     }
   }
-  if (RNG(0) === 1) {
-    let input = message.content;
-    console.log(input);
-    fetch("https://emma.cristianalvara9.repl.co/api", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ input: input }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data.output);
-      })
-      .catch((e) => {
-        console.error("error en javascript:", e);
-      });
-    //emmaAi(message.content);
+  if (RNG(0) === 0) {
+    emmaAi(message.content);
   }
 };
-const respuestasAnteriores = [];
-const inputsAnteriores = [];

@@ -235,9 +235,6 @@ client.on("messageCreate", (message) => {
   lastChannel = message.channel;
   lastAuthor = message.author;
   lastId = message.id;
-  if (test && message.author.id !== 368217259094704128 && !message.author.bot) {
-    return;
-  }
   if (stop) {
     if (message.author.bot === false) {
       const emmaResponde = require("./jsEmma/respuestasAutomaticas.js");
