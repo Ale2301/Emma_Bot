@@ -91,9 +91,8 @@ module.exports.comandosEmma = async function (
     }
     const datoEmma = require("../jsEmma/otorgarDatos.js");
     datoEmma.emmaDiceDato(lastChannel, message);
-  }
-  else if (finalMessage.startsWith("juguemos a las preguntas")){
-    return
+  } else if (finalMessage.startsWith("juguemos a las preguntas")) {
+    return;
   }
 
   //Ordenar a Emma: Menu de ayuda
@@ -138,10 +137,7 @@ module.exports.comandosEmma = async function (
   }
   //Ordenar a Emma: Comando no reconocido
   else {
-    message.reply(
-      "Hola <@" +
-        message.author.id +
-        ">,  veo que intentas decirme algo pero no logre entenderte :V. No te olvides que puedes preguntarme por lo que puedo hacer por ti llamandome y diciendome 'help' "
-    );
+    const emmaResponde = require("./respuestasAutomaticas.js");
+    emmaResponde.respuestasEmma(message, true, lastChannel, client);
   }
 };

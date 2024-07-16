@@ -24,7 +24,6 @@ const generationConfig = {
 };
 module.exports.respuestasEmma = async function (message, respuesta, client) {
   const claveEmma = process.env["AI_API_TOKEN"];
-
   async function emmaAi(prompt) {
     const genAI = new GoogleGenerativeAI(claveEmma);
     console.log("Entrando en función EmmaAI");
@@ -67,6 +66,9 @@ module.exports.respuestasEmma = async function (message, respuesta, client) {
       message.reply("Alguien avisele a un dev que paso esto: " + e);
     }
   }
+  if (respuesta === true) {
+    emmaAi(message.content);
+  }
 
   //funcion para todo tipo de azar
   function RNG(max) {
@@ -74,7 +76,7 @@ module.exports.respuestasEmma = async function (message, respuesta, client) {
     return random;
   }
   //Respuestas a mensajes fijos
-  if (message.content.toLowerCase() === "decime mi nivel de puto") {
+  /*if (message.content.toLowerCase() === "decime mi nivel de puto") {
     message.reply(
       respuesta.respuestasNivelPuto[
         RNG(respuesta.respuestasNivelPuto.length - 1)
@@ -172,5 +174,5 @@ module.exports.respuestasEmma = async function (message, respuesta, client) {
   }
   if (RNG(2) === 0) {
     emmaAi(message.content);
-  }
+  }*/
 };
