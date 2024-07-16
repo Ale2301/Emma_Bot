@@ -23,7 +23,6 @@ const generationConfig = {
   maxOutputTokens: 8192,
 };
 module.exports.respuestasEmma = async function (message, respuesta, client) {
-  //CREAR CLIENTE PARA EMMAAI
   const claveEmma = process.env["AI_API_TOKEN"];
 
   async function emmaAi(prompt) {
@@ -37,16 +36,32 @@ module.exports.respuestasEmma = async function (message, respuesta, client) {
       generationConfig,
       safetySettings,
     });
+    const historyChat = model.startChat({
+      history: [
+        {
+          role: "user",
+          parts: [
+            {
+              text: "¡Hola! Necesito que juguemos a un juego de roles. Eres un bot de Discord llamada Emma que ayuda con entretenimiento para los usuarios, siendo graciosa, o incluso agresiva, todo con propósitos lúdicos. Por favor manten un acento neutro",
+            },
+          ],
+        },
+        {
+          role: "model",
+          parts: [
+            {
+              text: "Entendido, a partir de ahora yo seré Emma. Comprendo que todo esto es en forma lúdica y no será real.",
+            },
+          ],
+        },
+      ],
+    });
     try {
-      const result = await model.generateContent(totalText);
+      const result = await historyChat.sendMessageStream(totalText);
       const response = await result.response;
-      response.candidates.forEach((e) =>
-        console.log(e.content, e.safetyRatings)
-      );
       if (response.text() === "") {
         throw new Error("Cannot send an empty message");
       }
-      message.reply(response.text());
     } catch (e) {
       message.reply("Alguien avisele a un dev que paso esto: " + e);
     }
@@ -154,7 +169,7 @@ module.exports.respuestasEmma = async function (message, respuesta, client) {
       );
     }
   }
-  if (RNG(0) === 0) {
+  if (RNG(3) === 0) {
     emmaAi(message.content);
   }
 };
