@@ -62,6 +62,7 @@ module.exports.respuestasEmma = async function (message, respuesta, client) {
       if (response.text() === "") {
         throw new Error("Cannot send an empty message");
       }
+      message.reply(response.text());
     } catch (e) {
       message.reply("Alguien avisele a un dev que paso esto: " + e);
     }
@@ -169,7 +170,7 @@ module.exports.respuestasEmma = async function (message, respuesta, client) {
       );
     }
   }
-  if (RNG(3) === 0) {
+  if (RNG(2) === 0) {
     emmaAi(message.content);
   }
 };
