@@ -313,7 +313,7 @@ client.on("ready", () => {
     console.log("Emma esta siendo testeada");
   }
   if (process.env.TRELLO) {
-    lastChannel = "1241836174411300882";
+    lastChannel = "1269130876415901747";
     lastChannel = client.channels.cache.get(lastChannel);
   }
   if (test) {
