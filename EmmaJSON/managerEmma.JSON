@@ -505,7 +505,7 @@
     "secondQuestion": "secondQuestion",
     "thirdQuestion": "thirdQuestion",
     "outroMessage": "Si estan viendo esto Alejo no hizo bien su trabajo"
-  }
+  },
   {
     "fecha": 12,
     "mes": "agosto",
@@ -518,7 +518,7 @@
     "secondQuestion": "¿Aprobecharon el fin de semana para avanzar o se la pasaron jugando lol?",
     "thirdQuestion": "¿Les parecen dificiles sus tareas o les parecen faciles?",
     "outroMessage": "Recuerden que si tienen dudas siempre le pueden preguntar a alejo que para algo es el lider de area"
-   }
+   },
    {
     "fecha": 13,
     "mes": "agosto",
@@ -531,7 +531,7 @@
     "secondQuestion": "¿Encontraste la manera de manejar tus tiempos con el proyecto?",
     "thirdQuestion": "¿Crees necesiar ayuda?",
     "outroMessage": "Si te llegas a sentir inutil dentro del grupo recuerda que todabia nadie sabe que es lo que hace cris y aun asi sigue aca con nosotros"
-  }
+  },
   {
     "fecha": 14,
     "mes": "agosto",
@@ -544,7 +544,7 @@
     "secondQuestion": "¿Surgio algun problema durante la realizacion de las tareas?",
     "thirdQuestion": "¿Existen factores externos que afecten tu capacidad de realizar tus tareas?",
     "outroMessage": "Si hacer las DSU es programar al final si es pegarle dos sopapos al teclado y listo atte: Toby"
-  }
+  },
   {
     "fecha": 15,
     "mes": "agosto",
@@ -557,7 +557,7 @@
     "secondQuestion": "¿Crees tener todo listo para el cierre de sprint de mañana?(esta pregunta fue escrita el sabado a las 4:00am si el cierre de sprint no es el viernes es porque todabia no me compre la maquina del tiempo)",
     "thirdQuestion": "¿Ya le prestaste ayuda a otro integrante del equipo?¿Porque no le prestaste tu ayuda a nadie?¿no te crees capas?",
     "outroMessage": "y aqui pondria mi outroMessage si tan solo tubiera uno"
-  }
+  },
   {
     "fecha": 16,
     "mes": "agosto",
@@ -570,5 +570,5 @@
     "secondQuestion": "¿Crees que el equipo esta comprometido con el pryecto?",
     "thirdQuestion": "¿Pensas descansar este finde o vas a seguir con el proyecto?",
     "outroMessage": "Hasta aca llegan mis DSU ahora solo quiero ver quien va a ganar la carrera de patitos"
-  }
+  },
 ]
