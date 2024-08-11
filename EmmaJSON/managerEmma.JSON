@@ -506,4 +506,69 @@
     "thirdQuestion": "thirdQuestion",
     "outroMessage": "Si estan viendo esto Alejo no hizo bien su trabajo"
   }
+  {
+    "fecha": 12,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Empezamos un nuevo proyecto y lo mejor hasta ahora es que emma ya no rompe las bolas",
+    "firstQuestion": "¿Como se sienten los las asignaciones de sus tarjetas?¿les parece mucho o poco?",
+    "secondQuestion": "¿Aprobecharon el fin de semana para avanzar o se la pasaron jugando lol?",
+    "thirdQuestion": "¿Les parecen dificiles sus tareas o les parecen faciles?",
+    "outroMessage": "Recuerden que si tienen dudas siempre le pueden preguntar a alejo que para algo es el lider de area"
+   }
+   {
+    "fecha": 13,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Ya pasaron 4 dias desde el ultimo cierre de sprint y todabia me pregunto lo mismo: si hubiese una guerra entre chinos ¿como sabriamos quien gana?",
+    "firstQuestion": "¿Que hiciste o vas a hacer el dia de hoy?¿Avanzaste en algo?",
+    "secondQuestion": "¿Encontraste la manera de manejar tus tiempos con el proyecto?",
+    "thirdQuestion": "¿Crees necesiar ayuda?",
+    "outroMessage": "Si te llegas a sentir inutil dentro del grupo recuerda que todabia nadie sabe que es lo que hace cris y aun asi sigue aca con nosotros"
+  }
+  {
+    "fecha": 14,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Ya vamos mitad de semana, ¿seria muy irresponsable no haber tocado nada del proyecto todabia verdad?",
+    "firstQuestion": "¿Ya completaste alguna tarea?¿cual es el estado de las demas?",
+    "secondQuestion": "¿Surgio algun problema durante la realizacion de las tareas?",
+    "thirdQuestion": "¿Existen factores externos que afecten tu capacidad de realizar tus tareas?",
+    "outroMessage": "Si hacer las DSU es programar al final si es pegarle dos sopapos al teclado y listo atte: Toby"
+  }
+  {
+    "fecha": 15,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Despues de varios minutos de pensar preguntas no dejo de pensar en los hdps que sacaron sus nombres de la carrera de patitos",
+    "firstQuestion": "¿Se sienten comodos con el preyecto hasta ahora?",
+    "secondQuestion": "¿Crees tener todo listo para el cierre de sprint de mañana?(esta pregunta fue escrita el sabado a las 4:00am si el cierre de sprint no es el viernes es porque todabia no me compre la maquina del tiempo)",
+    "thirdQuestion": "¿Ya le prestaste ayuda a otro integrante del equipo?¿Porque no le prestaste tu ayuda a nadie?¿no te crees capas?",
+    "outroMessage": "y aqui pondria mi outroMessage si tan solo tubiera uno"
+  }
+  {
+    "fecha": 16,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Hoy es viernes y tu cuerpo lo sabe. Sabe que hoy no se sale porque hay cierre de sprint (posiblemente)(saludos de Toby del pasado)",
+    "firstQuestion": "¿Lograste terminar tus tareas a tiempo?¿Que te impidio terminar tus tareas?",
+    "secondQuestion": "¿Crees que el equipo esta comprometido con el pryecto?",
+    "thirdQuestion": "¿Pensas descansar este finde o vas a seguir con el proyecto?",
+    "outroMessage": "Hasta aca llegan mis DSU ahora solo quiero ver quien va a ganar la carrera de patitos"
+  }
 ]
