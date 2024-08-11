@@ -1,4 +1,5 @@
 require("dotenv").config();
+const { default: axios } = require("axios");
 const keep_alive = require("./keep_alive.js");
 const { Client, GatewayIntentBits, EmbedBuilder } = require("discord.js");
 const client = new Client({
@@ -12,6 +13,7 @@ const client = new Client({
   ],
 });
 const fs = require("fs");
+const { env } = require("process");
 const fsPromise = require("fs").promises;
 require("dotenv").config();
 
@@ -71,7 +73,7 @@ async function juego() {
     lastChannel.send(preguntaRandom.pregunta);
   });
 }
-client.on("messageCreate", async (message) => {
+/*client.on("messageCreate", async (message) => {
   console.log(stop);
   console.log(message.content.toLowerCase());
   console.log(message.author.bot);
@@ -134,7 +136,7 @@ client.on("messageCreate", async (message) => {
     stop = true;
     usuariosPreguntasPuntos = [];
   }
-});
+});*/
 
 //Juego contraseña
 let stopContraseña = true;
@@ -150,7 +152,7 @@ function juegoContraseña() {
     );
   }, 400);
 }
-client.on("messageCreate", (message) => {
+/*client.on("messageCreate", (message) => {
   return; //CONTRASEÑA
   if (stopContraseña === false) {
     if (/^[0-9]+$/.test(message.content) && message.content.length === 4) {
@@ -208,6 +210,7 @@ client.on("messageCreate", (message) => {
     }
   }
 });
+*/
 let secondsCheck = 0;
 let lastRememberedId = 0;
 let inactiveChatSeconds = 5000;
@@ -231,7 +234,8 @@ fs.readFile("./EmmaJSON/respuestas.JSON", function (err, data) {
   }
   respuesta = JSON.parse(data);
 });
-client.on("messageCreate", (message) => {
+
+/*client.on("messageCreate", (message) => {
   lastChannel = message.channel;
   lastAuthor = message.author;
   lastId = message.id;
@@ -244,26 +248,13 @@ client.on("messageCreate", (message) => {
       emmaResponde.respuestasEmma(message, respuesta, lastChannel, client);
     }
   }
-});
-
+});*/
 let lastChannel = undefined;
 let lastAuthor = undefined;
 let lastId = undefined;
 
 client.on("ready", () => {
   checkMessageHour();
-});
-
-client.on("messageCreate", (message) => {
-  return; //REDDIT
-  if (stop && !message.author.bot) {
-    if (message.content.toLowerCase() === "meme") {
-      toReddit(message, false);
-    }
-    if (message.content.toLowerCase() === "meme 69") {
-      toReddit(message, true);
-    }
-  }
 });
 function toReddit(message, extra) {
   const funcionReddit = require("./jsEmma/mensajesReddit.js");
@@ -273,7 +264,12 @@ function toReddit(message, extra) {
 function checkMessageHour() {
   setTimeout(() => {
     const revisarMensajesHora = require("./jsEmma/mensajesAutomaticos.js");
-    revisarMensajesHora.emmaMensajesHorarios(lastChannel);
+    revisarMensajesHora.emmaMensajesHorarios(
+      lastChannel,
+      process.env.TRELLO,
+      process.env.TRELLO_API,
+      process.env.TRELLO_TOKEN
+    );
     checkMessageHour();
   }, 60000);
 }
@@ -315,6 +311,10 @@ client.on("ready", () => {
     console.log("Apto para usar");
   } catch (error) {
     console.log("Emma esta siendo testeada");
+  }
+  if (process.env.TRELLO) {
+    lastChannel = "1269130876415901747";
+    lastChannel = client.channels.cache.get(lastChannel);
   }
   if (test) {
     client.user.setActivity("Siendo testeada. Y duele");
