@@ -570,5 +570,70 @@
     "secondQuestion": "¿Crees que el equipo esta comprometido con el pryecto?",
     "thirdQuestion": "¿Pensas descansar este finde o vas a seguir con el proyecto?",
     "outroMessage": "Hasta aca llegan mis DSU ahora solo quiero ver quien va a ganar la carrera de patitos"
+  },
+{
+    "fecha": 19,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "¡Holiss! tercera semana y tarjetas nuevas"
+    "firstQuestion": "¿Cómo crees que te fue la semana anterior? ¿Se te hizo muy difícil?"
+    "secondQuestion": "¿Aplicaras cambios a tu forma de organizarte o estás bien con tus tiempos?"
+    "thirdQuestion": "¿Cuánto tiempo van a dedicar está a la semana?"
+    "outroMessage": "¡Son las primeras semanas pero no se dejen estar!"
+  },
+  {
+    "fecha": 20,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "¡Buenass! segundo día de trabajoo"
+    "firstQuestion": "¿Empezaste con tu tarjeta o todavía no miraste nada?"
+    "secondQuestion": "¿Te parece complicado la tarjeta de está semana?"
+    "thirdQuestion": "¿Tenes dudas hacerca de tu tarjeta? "
+    "outroMessage": "Cualquier duda no duden en preguntarle al líder de programación"
+  },
+  {
+    "fecha": 21,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage":"¡Buenass! Estamos a miércoles supongo que están con la mitad de sus tarjetas yaa"
+    "firstQuestion": "¿Tenés problemas con la tarjeta o ni empezaste?"
+    "secondQuestion": "¿Hay alguna tarea pendiente que esté bloqueando tu avance en otras tarjetas?"
+    "thirdQuestion": "¿Cómo te sientes con respecto a tu carga de trabajo y tu progreso?"
+    "outroMessage": "¡Daleee! terminen para el viernes asi tienen finde libree"
+  },
+  {
+    "fecha": 22,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "¡Holisss! Estamos a jueves vamos terminando ya por esta semana y no se atrasen"
+    "firstQuestion": "¿Hay algo que te cause estrés o insatisfacción?"
+    "secondQuestion": "¿Hay alguna tarea o proyecto que necesite prioridad inmediata?"
+    "thirdQuestion": "¿Hay algún aspecto en el que creas que podríamos mejorar como equipo para apoyar mejor el progreso del proyecto?"
+    "outroMessage": " Vamoss ultimos dias de DSU apureeen loco"
+  },
+  {
+    "fecha": 23,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Buenasss es viernesss y último día de DSU ¿está todo yaa?"
+    "firstQuestion": "¿En qué fase estás con respecto a tus tarjetas?"
+    "secondQuestion": "¿Hay algún aspecto en el que creas que podríamos mejorar como equipo para apoyar mejor el progreso del proyecto?"
+    "thirdQuestion": "¿Has enfrentado algún impedimento que no se haya previsto para hacer tu tarjeta?"
+    "outroMessage": "Espero que hayan terminado ya y nos vemos el lunes para el sprint :D"
   }
 ]
