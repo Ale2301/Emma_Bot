@@ -635,5 +635,70 @@
     "secondQuestion": "¿Hay algún aspecto en el que creas que podríamos mejorar como equipo para apoyar mejor el progreso del proyecto?",
     "thirdQuestion": "¿Has enfrentado algún impedimento que no se haya previsto para hacer tu tarjeta?",
     "outroMessage": "Espero que hayan terminado ya y nos vemos el lunes para el sprint :D"
+  },
+  {
+    "fecha": 28,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Buen Miercoles para todos, espero que esten trabajando y/o aprendiendo :p",
+    "firstQuestion": "¿Cuál es la tarea principal en la que te estás enfocando hoy?",
+    "secondQuestion": "¿Hay algun bloqueo que afecte a tu trabajo?",
+    "thirdQuestion": "¿Hay alguna ayuda que necesites del equipo?",
+    "outroMessage": "Mitad de semana, sigan asi que estan trabajando bien"
+  },
+  {
+    "fecha": 29,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Hola vengo a ver como estan",
+    "firstQuestion": "¿Cuál es la prioridad más alta que necesitas abordar hoy?",
+    "secondQuestion": "¿Has identificado algún riesgo o desafío que podría afectar tu progreso?",
+    "thirdQuestion": "¿Como te sentias animicamente con el proyecto/tarjetas asignadas?",
+    "outroMessage": "Sigan laburando, pero sin descuidar sus otras responsabilidades"
+  },
+  {
+    "fecha": 30,
+    "mes": "agosto",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Que día es hoy? Viernes, y que pasa los Viernes? NO ME BAÑOOOO SEEEEE xd",
+    "firstQuestion": "¿Algo de tu trabajo actual podría beneficiarse con la colaboración de otro miembro del equipo?",
+    "secondQuestion": "¿Hay algún área del proyecto que te preocupe especialmente en este momento?",
+    "thirdQuestion": "¿Hay alguna herramienta o recurso que pueda ayudarte a ser más eficiente?",
+    "outroMessage": "Mañana empieza el finde, si estan al día pueden escabiar de mas, sino TRABAJEN :v"
+  },
+  {
+    "fecha": 2,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Arrancamos un nuevo mes, Septiembre (sin fap) suerte soldados",
+    "firstQuestion": "¿Cuál es el mayor logro que alcanzaste esta semana hasta ahora?",
+    "secondQuestion": "¿Qué problema recurrente estás enfrentando que podríamos solucionar como equipo?",
+    "thirdQuestion": "¿Qué expectativas se han cumplido o no cumplido esta semana?",
+    "outroMessage": "Nos vemos mañana en la siguiente DSU, los vigilo we"
+  },
+  {
+    "fecha": 3,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Ayer fue el cierre de sprint, espero haya sido un exito",
+    "firstQuestion": "¿Qué tarea o parte del proyecto requiere más atención hoy?",
+    "secondQuestion": "¿Hubo alguna confusión o malentendido en las tareas asignadas?",
+    "thirdQuestion": "¿Hay alguna dependencia externa que podría retrasar tu trabajo?",
+    "outroMessage": "Fue un gusto ser el responsable de estas lindas preguntas de DSU, los saluda su amigo SrTurco"
   }
 ]
