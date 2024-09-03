@@ -700,5 +700,70 @@
     "secondQuestion": "¿Hubo alguna confusión o malentendido en las tareas asignadas?",
     "thirdQuestion": "¿Hay alguna dependencia externa que podría retrasar tu trabajo?",
     "outroMessage": "Fue un gusto ser el responsable de estas lindas preguntas de DSU, los saluda su amigo SrTurco"
+  },
+  {
+    "fecha": 4,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Que onda gente? Bueno empezamos otra semana de esclavitud, preguntas y respuestas",
+    "firstQuestion": "¿Te quedo algo pendiente de la semana anterior? ¿Crees poder solucionarlo?",
+    "secondQuestion": "¿Te sentis capaz de poder realizar las tarjetas asignadas?",
+    "thirdQuestion": "¿Hay algo que te moleste del metodo en el que estamos trabajando?",
+    "outroMessage": "Vamos muchachas, no se dejen estar que despues van a terminar con 15 tarjetas y una cagada a pedo"
+  },
+  {
+    "fecha": 5,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "BuenasBuenas, Empezamos con la DSU diaria de hoy",
+    "firstQuestion": "¿Pudiste empezar tu tarjeta o todavia no?",
+    "secondQuestion": "¿El proyecto te esta haciendo sentir presionado/estresado?",
+    "thirdQuestion": "¿Como te sentis con respecto a tus tarjetas asignadas? ¿Tenes alguna duda? ",
+    "outroMessage": "Recuerden que tienen que responder a diario las DSU, comer frutas y tomar agua"
+  },
+  {
+    "fecha": 6,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage":"Vamos muchachos que hoy es viernes. Moscato, pizza y faina",
+    "firstQuestion": "¿Ya pudiste finalizar alguna de las tareas asignadas?",
+    "secondQuestion": "¿Hay algo que te este bloqueando y no te permita avanzar?",
+    "thirdQuestion": "¿Estas descansando bien? Recuerden que tienen que cuidar su tiempo de descanso",
+    "outroMessage": "Vamos que hoy si hoy se termina tenes el finde para descansar"
+  },
+  {
+    "fecha": 9,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Otro Lunes, otra DSU",
+    "firstQuestion": "¿Sentis que el proyecto esta avanzando por buen camino?",
+    "secondQuestion": "Hoy cierra el Sprint ¿Pudiste completar todas tus tareas?",
+    "thirdQuestion": "¿Tuviste alguna complicacion a nivel personal o grupal que te haya molestado a lo largo de esta semana?",
+    "outroMessage": " Vamos que cada vez falta menos para finalizar el jueguito"
+  },
+  {
+    "fecha": 10,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Su escritor de DSU favorito llego y les dice",
+    "firstQuestion": "Ayer hubo cierre ¿Sentis que hay algo que te guardaste y no quisiste decir?",
+    "secondQuestion": "¿Como te sentis con respecto al equipo?",
+    "thirdQuestion": "¿Sentis que estas acomodando bien tus tiempos?",
+    "outroMessage": "Aca finaliza mi labor, si les gustaron las preguntas por favor depositenme. Suerte y que las llamas os guien"
   }
 ]
