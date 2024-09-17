@@ -518,8 +518,8 @@
     "secondQuestion": "¿Aprobecharon el fin de semana para avanzar o se la pasaron jugando lol?",
     "thirdQuestion": "¿Les parecen dificiles sus tareas o les parecen faciles?",
     "outroMessage": "Recuerden que si tienen dudas siempre le pueden preguntar a alejo que para algo es el lider de area"
-   },
-   {
+  },
+  {
     "fecha": 13,
     "mes": "agosto",
     "dia": true,
@@ -571,7 +571,7 @@
     "thirdQuestion": "¿Pensas descansar este finde o vas a seguir con el proyecto?",
     "outroMessage": "Hasta aca llegan mis DSU ahora solo quiero ver quien va a ganar la carrera de patitos"
   },
-{
+  {
     "fecha": 19,
     "mes": "agosto",
     "dia": true,
@@ -604,7 +604,7 @@
     "hora": 6,
     "minuto": 0,
     "amPm": "pm",
-    "introMessage":"¡Buenass! Estamos a miércoles supongo que están con la mitad de sus tarjetas yaa",
+    "introMessage": "¡Buenass! Estamos a miércoles supongo que están con la mitad de sus tarjetas yaa",
     "firstQuestion": "¿Tenés problemas con la tarjeta o ni empezaste?",
     "secondQuestion": "¿Hay alguna tarea pendiente que esté bloqueando tu avance en otras tarjetas?",
     "thirdQuestion": "¿Cómo te sientes con respecto a tu carga de trabajo y tu progreso?",
@@ -734,7 +734,7 @@
     "hora": 6,
     "minuto": 0,
     "amPm": "pm",
-    "introMessage":"Vamos muchachos que hoy es viernes. Moscato, pizza y faina",
+    "introMessage": "Vamos muchachos que hoy es viernes. Moscato, pizza y faina",
     "firstQuestion": "¿Ya pudiste finalizar alguna de las tareas asignadas?",
     "secondQuestion": "¿Hay algo que te este bloqueando y no te permita avanzar?",
     "thirdQuestion": "¿Estas descansando bien? Recuerden que tienen que cuidar su tiempo de descanso",
@@ -765,5 +765,83 @@
     "secondQuestion": "¿Como te sentis con respecto al equipo?",
     "thirdQuestion": "¿Sentis que estas acomodando bien tus tiempos?",
     "outroMessage": "Aca finaliza mi labor, si les gustaron las preguntas por favor depositenme. Suerte y que las llamas os guien"
+  },
+  {
+    "fecha": 17,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Sean todos bienvenidos al Sprint 6. Recuerden que estamos muy cerca de terminar este proyecto!",
+    "firstQuestion": "¿En qué están trabajando en el día de hoy?",
+    "secondQuestion": "¿Sienten que hay algo en la metodología que debería cambiar?",
+    "thirdQuestion": "¿Existe algún bloqueador que evite que completes tu/s tarjeta/s?",
+    "outroMessage": "Recuerden que en este mundo, el éxito no es llegar a la meta, sino las pequeñas victorias de cada tarjeta :)"
+  },
+  {
+    "fecha": 18,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "¡DSU time! Esta es la parte donde hago preguntas que nadie lee, pero justifica el sueldo de los managers",
+    "firstQuestion": "¿Qué van a hacer hoy?",
+    "secondQuestion": "¿Estas contento con el desarrollo del proyecto hasta ahora?",
+    "thirdQuestion": "¿Pudiste completar la tarjeta en la que trabajabas ayer? ¿Necesitas algo?",
+    "outroMessage": "Recuerden, no hace falta ir rápido, pero si seguro. Un paso a la vez. Y por favor no dejen todo para último momento"
+  },
+  {
+    "fecha": 19,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Feliz jueves *acá insertaría el meme si estuviera programada para hacerlo*",
+    "firstQuestion": "¿Como viene el progreso en su/s tarjeta/s?",
+    "secondQuestion": "¿Tus desafíos logran emocionarte, frustrarte o ambas? Podes ampliar si gustas :)",
+    "thirdQuestion": "¿Necesitas algún buddy? ¿Cambiar al que tenés? Aunque no estemos en cierre de Sprint, pueden pedir esas cosas si necesitan",
+    "outroMessage": "Y no se olviden, si quieren que algo cambie, tienen que quejarse. Nadie va a hacerlo por ustedes"
+  },
+  {
+    "fecha": 20,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "¡Casi fin de semana! Los felicito profundamente por vivir una semana más",
+    "firstQuestion": "¿Qué vas a hacer hoy?",
+    "secondQuestion": "¿Vas a descansar el fin de semana, o dejaste todo para último momento y tenes que seguir con las tarjetas?",
+    "thirdQuestion": "¿Hay algo que podamos hacer para ayudarte con tu progreso?",
+    "outroMessage": "Como saben, llegó el break de las DSU. Nos vemos de nuevo el lunes :)"
+  },
+  {
+    "fecha": 23,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Inicio de semana, y a la vez cierre de sprint, irónico",
+    "firstQuestion": "Hoy ya es el cierre, ¿Terminaste todo?",
+    "secondQuestion": "¿Cómo te sentiste esta semana con tus tareas asignadas?",
+    "thirdQuestion": "¿Existe algo en particular que te haya interesado más, molestado, etc, que quieras decir sobre este sprint?",
+    "outroMessage": "Espero que el finde hayan tenido su merecido descanso. Pero a partir de mañana, hay que empezar de nuevo, animos!"
+  },
+  {
+    "fecha": 24,
+    "mes": "septiembre",
+    "dia": true,
+    "hora": 6,
+    "minuto": 0,
+    "amPm": "pm",
+    "introMessage": "Este es mi último día como escritor de las DSU. Espero que las preguntas hayan generado dinámicas útiles (Seguro que no)",
+    "firstQuestion": "¿Cómo te sentís con tus tareas asignadas para esta semana?",
+    "secondQuestion": "¿Sentís que el equipo esta a la altura de las expectativas del proyecto? (Podes responder si o no, no necesitas apuntar a alguien. Si queres porsupuesto podes hacerlo)",
+    "thirdQuestion": "¿Empezaste a hacer algo en el proyecto?",
+    "outroMessage": "node:19920 UnhandledPromiseRejectionWarning: Error ERR EMMA HEADERS SENT: Si ves esto Alejo no hizo bien su trabajo"
   }
 ]
