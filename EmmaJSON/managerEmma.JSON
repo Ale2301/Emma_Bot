@@ -843,5 +843,70 @@
     "secondQuestion": "¿Sentís que el equipo esta a la altura de las expectativas del proyecto? (Podes responder si o no, no necesitas apuntar a alguien. Si queres porsupuesto podes hacerlo)",
     "thirdQuestion": "¿Empezaste a hacer algo en el proyecto?",
     "outroMessage": "node:19920 UnhandledPromiseRejectionWarning: Error ERR EMMA HEADERS SENT: Si ves esto Alejo no hizo bien su trabajo"
+  },
+{
+    "fecha": 25,
+    "mes": "Septiembre",
+    "dia": true,
+    "hora": 7,
+    "minuto": 00,
+    "amPm": "pm",
+    "introMessage": " Hoy es Miercoles, ¿y saben que se tiene que hacer hoy?, SI!! contestar las preguntas de hoy!! ",
+    "firstQuestion": "1. ¿Como te sientes con este equipo?¿hay alguna molestia sobre como se maneja el equipo? (no se puede contestar con si ni no, los conosco)",
+    "secondQuestion": "2. ¿Te da el tiempo para hacer todas tus tareas/tarjetas para el cierre de sprint?",
+    "thirdQuestion": "3. ¿Sientes que estas muy cargado con el tiempo?¿le hechas muchas ganas al proyecto?",
+    "outroMessage": "Mucha Suerte en su dia, y suerte para mañana :)"
+  },
+  {
+    "fecha": 26,
+    "mes": "Septiembre",
+    "dia": true,
+    "hora": 7,
+    "minuto": 00,
+    "amPm": "pm",
+    "introMessage": "como les va en el dia de hoy??, espero que bien!. Recuerden de comer bien y dormir bien para contestar sus preguntas en el dia de hoy!!",
+    "firstQuestion": "1. ¿Como vas con tus tareas/tarjetas?¿O no hiciste nada y te la pasaste jugando?",
+    "secondQuestion": "2. ¿Crees que tienes que mejorar algun aspecto sobre tu trabajon en el proyecto?, si es asi ¿Que aspecto seria?",
+    "thirdQuestion": "3. ¿Crees que necesitas ayuda con algo? (no dudes en pedir ayuda a alguien si te sientes atorado)",
+    "outroMessage": "Que tengas un buen dia!, y no te pierdas en el sendero de la vida como Kakashi sensei ;)"
+  },
+  {
+    "fecha": 27,
+    "mes": "Septiembre",
+    "dia": true,
+    "hora": 7,
+    "minuto": 00,
+    "amPm": "pm",
+    "introMessage": "Saben que dia es hoy?????, SIII VIERNES! y que se hacen los viernes?? NO ME BAÑ... mentira no XD, es momento de las preguntas!",
+    "firstQuestion": "1. ¿Pudiste terminar ya con alguna tarea/tarjeta?¿tuviste alguna complicacion?",
+    "secondQuestion": "2. ¿Sientes que te consume mucho tiempo hacer una tarea/tarjeta?",
+    "thirdQuestion": "3.  ¿Sentis que podes dar mas potencial tuyo para terminar las tarjetas? ",
+    "outroMessage": "Que tengan un muy buen fin de semana!! y como dice el sensei Yami Sukehiro, supera tus limites, aqui y ahora"
+  },
+  {
+    "fecha": 30,
+    "mes": "Septiembre",
+    "dia": true,
+    "hora": 7,
+    "minuto": 00,
+    "amPm": "pm",
+    "introMessage": "Espero que hayan descansado bien y hayan jugado mucho, ya hay que volver al trabajo!",
+    "firstQuestion": "1. ¿ya estas listo para terminar tus tareas/tarjetas?",
+    "secondQuestion": "2. ¿lograste terminar tus tareas/tarjetas para hoy?¿pudiste avanzar aunque sea algo en caso de no terminar nada?",
+    "thirdQuestion": "3.  ¿Crees que mejoraste en algo al estar haciendo algo en este proyecto? ",
+    "outroMessage": "No se aflojen que hoy es lunes y hay que empezar devuelta con el trabajo "
+  },
+  {
+    "fecha": 1,
+    "mes": "Octubre",
+    "dia": true,
+    "hora": 7,
+    "minuto": 00,
+    "amPm": "pm",
+    "introMessage": "Esta fue mi primera DSU, y espero la ultima (no tengo mas ideas para hacer mas preguntas XD)",
+    "firstQuestion": "1. ¿Crees que has mejorado durante todo este tiempo que estuviste en el proyecto?",
+    "secondQuestion": "2. ¿Pensas que esta por buen camino el proyecto?",
+    "thirdQuestion": "3.  ¿Crees que podremos con el siguiente proyecto?",
+    "outroMessage": " Fue un gusto hacer estas DSU, (espero que la carrera de patitos no me elija denuevo Jk), Saludos!! "
   }
 ]
